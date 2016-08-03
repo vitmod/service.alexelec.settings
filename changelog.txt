@@ -1,0 +1,2 @@
+2016-08-03 v7.0.0
+  (init) change new AlexELEC branding
