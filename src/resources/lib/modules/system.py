@@ -82,7 +82,7 @@ class system:
                         'KeyboardLayout2': {
                             'order': 3,
                             'name': 32010,
-                            'value': 'us',
+                            'value': 'ru',
                             'action': 'set_keyboard_layout',
                             'type': 'multivalue',
                             'values': [],
