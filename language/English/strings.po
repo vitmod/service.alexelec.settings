@@ -925,3 +925,61 @@ msgstr ""
 msgctxt "#824"
 msgid "Enable debug VNC server."
 msgstr ""
+
+########## System Locale ##########
+
+msgctxt "#33010"
+msgid "System Locale"
+msgstr ""
+
+msgctxt "#33011"
+msgid "Set the system locale:"
+msgstr ""
+
+msgctxt "#3311"
+msgid "Locales are used by programs or libraries for rendering text, correctly displaying regional monetary values, time and date formats, alphabetic idiosyncrasies, and other locale-specific standards.\nTo take effect, the system needs to be rebooted."
+msgstr ""
+
+########## Sound ##########
+
+msgctxt "#33020"
+msgid "Sound config"
+msgstr ""
+
+msgctxt "#33021"
+msgid "Sound device"
+msgstr ""
+
+msgctxt "#3321"
+msgid "Select sound device."
+msgstr ""
+
+msgctxt "#33022"
+msgid "Test device"
+msgstr ""
+
+msgctxt "#3322"
+msgid "Test sound device."
+msgstr ""
+
+msgctxt "#33023"
+msgid "Apply the configuration"
+msgstr ""
+
+msgctxt "#3323"
+msgid "Apply the configuration. Create <asound.conf> file.\nTo take effect, the system restart is not required."
+msgstr ""
+
+########## XORG ##########
+
+msgctxt "#33030"
+msgid "Xorg config"
+msgstr ""
+
+msgctxt "#33031"
+msgid "Disable mouse cursor"
+msgstr ""
+
+msgctxt "#3331"
+msgid "Disable mouse cursor.\nTo take effect, the system needs to be rebooted."
+msgstr ""

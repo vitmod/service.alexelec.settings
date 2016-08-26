@@ -11,6 +11,7 @@ import time
 import json
 import xbmc
 import xbmcgui
+import xbmcaddon
 import tarfile
 import oeWindows
 import threading
@@ -32,6 +33,15 @@ class system:
     RESTORE_DIR = None
     GET_CPU_FLAG = None
     SET_CLOCK_CMD = None
+    D_SYS_LOCALE = None
+    GET_SYS_LOCALE = None
+    SYS_LOCALE_LIST = None
+    SND_DEV_LIST = None
+    SND_LIST_TEMP = None
+    SND_TEST = None
+    SND_FILE_RUN = None
+    D_DISABLE_CURSOR = None
+
     menu = {'1': {
         'name': 32002,
         'menuLoader': 'load_menu',
@@ -108,6 +118,66 @@ class system:
                             },
                         },
                     },
+                'locale': {
+                    'order': 3,
+                    'name': 33010,
+                    'settings': {
+                        'sys_locale': {
+                            'order': 1,
+                            'name': 33011,
+                            'value': 'ru_RU.utf8',
+                            'values': [],
+                            'action': 'initialize_locale',
+                            'type': 'multivalue',
+                            'InfoText': 3311,
+                            },
+                        },
+                    },
+                'sound': {
+                    'order': 4,
+                    'name': 33020,
+                    'settings': {
+                        'snd-dev': {
+                            'order': 1,
+                            'name': 33021,
+                            'value': 'none',
+                            'action': 'initialize_sound',
+                            'type': 'multivalue',
+                            'values': [],
+                            'InfoText': 3321,
+                            },
+                        'snd-test': {
+                            'order': 2,
+                            'name': 33022,
+                            'value': '0',
+                            'action': 'test_sound',
+                            'type': 'button',
+                            'InfoText': 3322,
+                            },
+                        'snd-file': {
+                            'order': 3,
+                            'name': 33023,
+                            'value': '0',
+                            'action': 'file_sound',
+                            'type': 'button',
+                            'InfoText': 3323,
+                            },
+                        },
+                    },
+                'xorg': {
+                    'order': 5,
+                    'name': 33030,
+                    'settings': {
+                        'cursor': {
+                            'order': 1,
+                            'name': 33031,
+                            'value': '0',
+                            'action': 'initialize_xorg',
+                            'type': 'bool',
+                            'InfoText': 3331,
+                            },
+                        },
+                    },
                 'backup': {
                     'order': 7,
                     'name': 32371,
@@ -169,6 +239,9 @@ class system:
             self.set_hostname()
             self.set_keyboard_layout()
             self.set_hw_clock()
+            self.initialize_locale(service=1)
+            self.initialize_sound()
+            self.initialize_xorg(service=1)
             del self.is_service
             self.oe.dbg_log('system::start_service', 'exit_function', 0)
         except Exception, e:
@@ -247,6 +320,26 @@ class system:
                 self.struct['ident']['settings']['hostname']['value'] = value
             else:
                 self.struct['ident']['settings']['hostname']['value'] = self.oe.DISTRIBUTION
+
+            # Load system Locale list
+            arrLocale = self.get_sys_locale()
+            if not arrLocale is None:
+                self.struct['locale']['settings']['sys_locale']['values'] = arrLocale
+
+            self.struct['locale']['settings']['sys_locale']['value'] = \
+            self.oe.get_service_option('locale', 'SYS_LOCALE', self.D_SYS_LOCALE).replace('"', '')
+
+            # Load Sound devices list
+            arrSndDev = self.get_sound_dev()
+            if not arrSndDev is None:
+                self.struct['sound']['settings']['snd-dev']['values'] = arrSndDev
+                value = self.oe.read_setting('system', 'snd-dev')
+                if not value is None:
+                    self.struct['sound']['settings']['snd-dev']['value'] = value
+
+            # Xorg mouse cursor
+            self.struct['xorg']['settings']['cursor']['value'] = \
+            self.oe.get_service_option('xorg', 'DISABLE_CURSOR', self.D_DISABLE_CURSOR).replace('"', '')
 
             self.oe.dbg_log('system::load_values', 'exit_function', 0)
         except Exception, e:
@@ -618,38 +711,139 @@ class system:
             elif os.path.isdir(itempath):
                 self.get_folder_size(itempath)
 
-    def do_wizard(self):
+    def initialize_locale(self, **kwargs):
         try:
-            self.oe.dbg_log('system::do_wizard', 'enter_function', 0)
-            self.oe.winOeMain.set_wizard_title(self.oe._(32003))
-            self.oe.winOeMain.set_wizard_text(self.oe._(32304))
-            self.oe.winOeMain.set_wizard_button_title(self.oe._(32308))
-            self.oe.winOeMain.set_wizard_button_1(self.struct['ident']['settings']['hostname']['value'], self, 'wizard_set_hostname')
-            self.oe.dbg_log('system::do_wizard', 'exit_function', 0)
-        except Exception, e:
-            self.oe.dbg_log('system::do_wizard', 'ERROR: (' + repr(e) + ')')
+            self.oe.dbg_log('locale::initialize_locale', 'enter_function', 0)
+            self.oe.set_busy(1)
+            if 'listItem' in kwargs:
+                self.set_value(kwargs['listItem'])
+            options = {}
+            state = 1
+            options['SYS_LOCALE'] = '"%s"' % self.struct['locale']['settings']['sys_locale']['value']
 
-    def wizard_set_hostname(self):
-        try:
-            self.oe.dbg_log('system::wizard_set_hostname', 'enter_function', 0)
-            currentHostname = self.struct['ident']['settings']['hostname']['value']
-            xbmcKeyboard = xbmc.Keyboard(currentHostname)
-            result_is_valid = False
-            while not result_is_valid:
-                xbmcKeyboard.doModal()
-                if xbmcKeyboard.isConfirmed():
-                    result_is_valid = True
-                    validate_string = self.struct['ident']['settings']['hostname']['validate']
-                    if validate_string != '':
-                        if not re.search(validate_string, xbmcKeyboard.getText()):
-                            result_is_valid = False
-                else:
-                    result_is_valid = True
-            if xbmcKeyboard.isConfirmed():
-                self.struct['ident']['settings']['hostname']['value'] = xbmcKeyboard.getText()
-                self.set_hostname()
-                self.oe.winOeMain.getControl(1401).setLabel(self.struct['ident']['settings']['hostname']['value'])
-                self.oe.write_setting('system', 'hostname', self.struct['ident']['settings']['hostname']['value'])
-            self.oe.dbg_log('system::wizard_set_hostname', 'exit_function', 0)
+            self.oe.set_service('locale', options, state)
+            self.oe.set_busy(0)
+            self.oe.dbg_log('locale::initialize_locale', 'exit_function', 0)
         except Exception, e:
-            self.oe.dbg_log('system::wizard_set_hostname', 'ERROR: (' + repr(e) + ')')
+            self.oe.set_busy(0)
+            self.oe.dbg_log('locale::initialize_locale', 'ERROR: (' + repr(e) + ')')
+
+    def get_sys_locale(self):
+        try:
+            self.oe.dbg_log('locale::get_sys_locale', 'enter_function', 0)
+
+            arrSysLocale = []
+
+            self.oe.execute(self.GET_SYS_LOCALE, 0)
+            for langs in open(self.SYS_LOCALE_LIST).readlines():
+                arrSysLocale.append(langs.strip())
+
+            arrSysLocale.sort()
+            self.oe.dbg_log('locale::get_sys_locale', 'exit_function', 0)
+
+            return arrSysLocale
+        except Exception, e:
+            self.oe.dbg_log('locale::get_sys_locale', 'ERROR: (' + repr(e) + ')')
+
+    def initialize_sound(self, listItem=None):
+        try:
+            self.oe.dbg_log('sound::initialize_sound', 'enter_function', 0)
+            if not listItem == None:
+                if listItem.getProperty('entry') == 'snd-dev':
+                    if self.struct['sound']['settings']['snd-dev']['value'] != listItem.getProperty('value'):
+                        self.struct['sound']['settings']['snd-dev']['value'] = ''
+                self.set_value(listItem)
+
+            if 'hidden' in self.struct['sound']:
+                del self.struct['sound']['hidden']
+
+            if self.struct['sound']['settings']['snd-dev']['value'] != 'none':
+                if 'hidden' in self.struct['sound']['settings']['snd-test']:
+                    del self.struct['sound']['settings']['snd-test']['hidden']
+                if 'hidden' in self.struct['sound']['settings']['snd-file']:
+                    del self.struct['sound']['settings']['snd-file']['hidden']
+            else:
+                self.struct['sound']['settings']['snd-test']['hidden'] = True
+                self.struct['sound']['settings']['snd-file']['hidden'] = True
+
+            self.oe.dbg_log('sound::initialize_sound', 'exit_function', 0)
+        except Exception, e:
+            self.oe.dbg_log('sound::initialize_sound', 'ERROR: (' + repr(e) + ')')
+
+    def get_sound_dev(self):
+        try:
+            self.oe.dbg_log('sound::get_sound_dev', 'enter_function', 0)
+
+            arrSound = ['none']
+            self.oe.execute(self.SND_DEV_LIST, 0)
+            for snddev in open(self.SND_LIST_TEMP).readlines():
+                arrSound.append(snddev.strip())
+
+            arrSound.sort()
+            self.oe.dbg_log('sound::get_sound_dev', 'exit_function', 0)
+
+            return arrSound
+        except Exception, e:
+            self.oe.dbg_log('sound::get_sound_dev', 'ERROR: (' + repr(e) + ')')
+
+    def test_sound(self, listItem=None):
+        try:
+            self.oe.dbg_log('sound::test_sound', 'enter_function', 0)
+
+            str_sound_dev = self.oe.read_setting('system', 'snd-dev')
+            if str_sound_dev != 'none':
+                xbmc.executebuiltin('PlayerControl(Stop)')
+                xbmc.audioSuspend()
+                xbmc.enableNavSounds(False)
+                time.sleep(2)
+                snd_card = re.search('card ([\d]+)', str_sound_dev).group(1)
+                snd_dev = re.search('device ([\d]+)', str_sound_dev).group(1)
+                subprocess.Popen(self.SND_TEST % (int(snd_card), int(snd_dev)),
+                                    shell=True, 
+                                    close_fds=True,
+                                    stdout=subprocess.PIPE,
+                                    stderr=subprocess.STDOUT)
+
+                xbmcDialog = xbmcgui.Dialog()
+                answer = xbmcDialog.ok('Test Sound', ' ', 'Device: %s' % str_sound_dev)
+
+                self.oe.execute('killall -9 speaker-test', 0)
+                time.sleep(1)
+                xbmc.audioResume()
+                xbmc.enableNavSounds(True)
+
+        except Exception, e:
+            self.oe.dbg_log('sound::test_sound', 'ERROR: (' + repr(e) + ')')
+
+    def file_sound(self, listItem=None):
+        try:
+            self.oe.dbg_log('sound::file_sound', 'enter_function', 0)
+
+            str_sound_dev = self.oe.read_setting('system', 'snd-dev')
+            snd_card = re.search('card ([\d]+)', str_sound_dev).group(1)
+            snd_dev = re.search('device ([\d]+)', str_sound_dev).group(1)
+            if os.path.exists(self.SND_FILE_RUN):
+                info_sound = self.oe.execute(self.SND_FILE_RUN + ' %d %d' % (int(snd_card), int(snd_dev)), 1)
+                xbmcDialog = xbmcgui.Dialog()
+                answer = xbmcDialog.ok('Sound file', ' ',
+                            'Create asound.conf file:  %s' % info_sound)
+
+        except Exception, e:
+            self.oe.dbg_log('sound::file_sound', 'ERROR: (' + repr(e) + ')')
+
+    def initialize_xorg(self, **kwargs):
+        try:
+            self.oe.dbg_log('xorg::initialize_xorg', 'enter_function', 0)
+            self.oe.set_busy(1)
+            if 'listItem' in kwargs:
+                self.set_value(kwargs['listItem'])
+            options = {}
+            state = 1
+            options['DISABLE_CURSOR'] = '"%s"' % self.struct['xorg']['settings']['cursor']['value']
+
+            self.oe.set_service('xorg', options, state)
+            self.oe.set_busy(0)
+            self.oe.dbg_log('xorg::initialize_xorg', 'exit_function', 0)
+        except Exception, e:
+            self.oe.set_busy(0)
+            self.oe.dbg_log('xorg::initialize_xorg', 'ERROR: (' + repr(e) + ')')

@@ -87,6 +87,14 @@ system = {
         ],
     'BACKUP_DESTINATION': '/storage/backup/',
     'RESTORE_DIR': '/storage/.restore/',
+    'D_SYS_LOCALE': 'ru_RU.utf8',
+    'GET_SYS_LOCALE': "/usr/bin/locale -a > /tmp/locale.tmp",
+    'SYS_LOCALE_LIST': '/tmp/locale.tmp',
+    'SND_DEV_LIST': "aplay -l | grep card | awk -F'[' '{print $1,$2}' |sed 's/]//; s/://g' > /tmp/sndlist.tmp",
+    'SND_LIST_TEMP': '/tmp/sndlist.tmp',
+    'SND_TEST': "speaker-test -D plughw:%d,%d -c2 -t wav",
+    'SND_FILE_RUN': '%s/sound.sh' % SCRIPT_DIR,
+    'D_DISABLE_CURSOR': '0',
     }
 
 about = {'ENABLED': True}

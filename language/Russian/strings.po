@@ -831,3 +831,61 @@ msgstr "Отладка VNC"
 msgctxt "#824"
 msgid "Enable debug VNC server."
 msgstr "Вести журнал работы VNC сервера."
+
+########## System Locale ##########
+
+msgctxt "#33010"
+msgid "System Locale"
+msgstr "Системная Локаль"
+
+msgctxt "#33011"
+msgid "Set the system locale:"
+msgstr "Установить системную локаль:"
+
+msgctxt "#3311"
+msgid "Locales are used by programs or libraries for rendering text, correctly displaying regional monetary values, time and date formats, alphabetic idiosyncrasies, and other locale-specific standards.\nTo take effect, the system needs to be rebooted."
+msgstr "Локали определяют язык, который использует система, а также региональные особенности, такие как денежные знаки, формат чисел, даты и времени и наборы символов.\nДля вступления настроек в силу требуется перезагрузка системы."
+
+########## Sound ##########
+
+msgctxt "#33020"
+msgid "Sound config"
+msgstr "Настройки Звука"
+
+msgctxt "#33021"
+msgid "Sound device"
+msgstr "Устройство вывода звука"
+
+msgctxt "#3321"
+msgid "Select sound device."
+msgstr "Выберите звуковое устройство."
+
+msgctxt "#33022"
+msgid "Test device"
+msgstr "Тест звука"
+
+msgctxt "#3322"
+msgid "Test sound device."
+msgstr "Протестировать звук на выбранном устройстве."
+
+msgctxt "#33023"
+msgid "Apply the configuration"
+msgstr "Применить конфигурацию"
+
+msgctxt "#3323"
+msgid "Apply the configuration. Create <asound.conf> file.\nTo take effect, the system restart is not required."
+msgstr "Создать файл <asound.conf>. Эти настройки не влияют на звук в KODI.\nДля вступления настроек в силу перезагрузка системы не требуется."
+
+########## XORG ##########
+
+msgctxt "#33030"
+msgid "Xorg config"
+msgstr "Настройки Xorg"
+
+msgctxt "#33031"
+msgid "Disable mouse cursor"
+msgstr "Отключить курсор мыши"
+
+msgctxt "#3331"
+msgid "Disable mouse cursor.\nTo take effect, the system needs to be rebooted."
+msgstr "Отключить курсор мыши (не влияет на настройки KODI).\nДля вступления настроек в силу требуется перезагрузка системы."
