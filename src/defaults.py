@@ -63,6 +63,10 @@ services = {
     'CRON_DAEMON': '/sbin/crond',
     'LCD_DRIVER_DIR': '/usr/lib/lcdproc/',
     'D_LCD_DRIVER': 'none',
+    'D_RAMCLEAR_TIME': '5',
+    'D_VNC_DEBUG': '0',
+    'D_VNC_PORT': '5900',
+    'D_VNC_PASSWORD': 'alexelec',
     }
 
 system = {
@@ -97,4 +101,8 @@ _services = {
     'obexd': ['obex.service'],
     'crond': ['cron.service'],
     'lcdd': ['lcdd.service'],
+    'mysqld': ['mysqld.service'],
+    'minidlna': ['minidlna.service'],
+    'ramclear': ['drop-ram.service'],
+    'x11vnc': ['x11vnc.service'],
     }

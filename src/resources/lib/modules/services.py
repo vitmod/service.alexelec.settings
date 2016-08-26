@@ -7,7 +7,6 @@
 import os
 import glob
 
-
 class services:
 
     ENABLED = False
@@ -25,6 +24,11 @@ class services:
     CRON_DAEMON = None
     LCD_DRIVER_DIR = None
     D_LCD_DRIVER = None
+    D_RAMCLEAR_TIME = None
+    D_VNC_DEBUG = None
+    D_VNC_PORT = None
+    D_VNC_PASSWORD = None
+
     menu = {'4': {
         'name': 32001,
         'menuLoader': 'load_menu',
@@ -218,6 +222,114 @@ class services:
                             },
                         },
                     },
+                'mysql': {
+                    'order': 7,
+                    'name': 32401,
+                    'not_supported': [],
+                    'settings': {
+                        'mysql_autostart': {
+                            'order': 1,
+                            'name': 32411,
+                            'value': None,
+                            'action': 'initialize_mysql',
+                            'type': 'bool',
+                            'InfoText': 811,
+                            },
+                        },
+                    },
+                'minidlna': {
+                    'order': 8,
+                    'name': 32402,
+                    'not_supported': [],
+                    'settings': {
+                        'minidlna_autostart': {
+                            'order': 1,
+                            'name': 32412,
+                            'value': None,
+                            'action': 'initialize_minidlna',
+                            'type': 'bool',
+                            'InfoText': 812,
+                            },
+                        },
+                    },
+                'ramclear': {
+                    'order': 9,
+                    'name': 32403,
+                    'not_supported': [],
+                    'settings': {
+                        'ramclear_autostart': {
+                            'order': 1,
+                            'name': 32413,
+                            'value': None,
+                            'action': 'initialize_ramclear',
+                            'type': 'bool',
+                            'InfoText': 813,
+                            },
+                        'ramclear_time': {
+                            'order': 2,
+                            'name': 32414,
+                            'value': '5',
+                            'action': 'initialize_ramclear',
+                            'type': 'num',
+                            'parent': {
+                                'entry': 'ramclear_autostart',
+                                'value': ['1']
+                                },
+                            'InfoText': 814,
+                            },
+                        }
+                    },
+                'x11vnc': {
+                    'order': 10,
+                    'name': 32420,
+                    'not_supported': [],
+                    'settings': {
+                        'vnc_autostart': {
+                            'order': 1,
+                            'name': 32421,
+                            'value': None,
+                            'action': 'initialize_vnc',
+                            'type': 'bool',
+                            'InfoText': 821,
+                            },
+                        'vnc_port': {
+                            'order': 2,
+                            'name': 32422,
+                            'value': None,
+                            'action': 'initialize_vnc',
+                            'type': 'num',
+                            'parent': {
+                                'entry': 'vnc_autostart',
+                                'value': ['1'],
+                                },
+                            'InfoText': 822,
+                            },
+                        'vnc_password': {
+                            'order': 3,
+                            'name': 32423,
+                            'value': None,
+                            'action': 'initialize_vnc',
+                            'type': 'text',
+                            'parent': {
+                                'entry': 'vnc_autostart',
+                                'value': ['1'],
+                                },
+                            'InfoText': 823,
+                            },
+                        'vnc_debug': {
+                            'order': 4,
+                            'name': 32424,
+                            'value': None,
+                            'action': 'initialize_vnc',
+                            'type': 'bool',
+                            'parent': {
+                                'entry': 'vnc_autostart',
+                                'value': ['1'],
+                                },
+                            'InfoText': 824,
+                            },
+                        },
+                    },
                 }
 
             self.oe = oeMain
@@ -234,6 +346,10 @@ class services:
             self.initialize_avahi(service=1)
             self.initialize_cron(service=1)
             self.init_bluetooth(service=1)
+            self.initialize_mysql(service=1)
+            self.initialize_minidlna(service=1)
+            self.initialize_ramclear(service=1)
+            self.initialize_vnc(service=1)
             self.oe.dbg_log('services::start_service', 'exit_function', 0)
         except Exception, e:
             self.oe.dbg_log('services::start_service', 'ERROR: (%s)' % repr(e))
@@ -343,6 +459,23 @@ class services:
                 else:
                     self.struct['bluez']['hidden'] = 'true'
             self.oe.dbg_log('services::load_values', 'exit_function', 0)
+
+            # mySQL
+            self.struct['mysql']['settings']['mysql_autostart']['value'] = self.oe.get_service_state('mysqld')
+
+            # miniDLNA
+            self.struct['minidlna']['settings']['minidlna_autostart']['value'] = self.oe.get_service_state('minidlna')
+
+            # CLEAR RAM
+            self.struct['ramclear']['settings']['ramclear_autostart']['value'] = self.oe.get_service_state('ramclear')
+            self.struct['ramclear']['settings']['ramclear_time']['value'] = self.oe.get_service_option('ramclear', 'RAMCLEAR_TIME', self.D_RAMCLEAR_TIME).replace('"', '')
+
+            # x11VNC
+            self.struct['x11vnc']['settings']['vnc_autostart']['value'] = self.oe.get_service_state('x11vnc')
+            self.struct['x11vnc']['settings']['vnc_port']['value'] = self.oe.get_service_option('x11vnc', 'VNC_PORT', self.D_VNC_PORT).replace('"', '')
+            self.struct['x11vnc']['settings']['vnc_password']['value'] = self.oe.get_service_option('x11vnc', 'VNC_PASSWORD', self.D_VNC_PASSWORD).replace('"', '')
+            self.struct['x11vnc']['settings']['vnc_debug']['value'] = self.oe.get_service_option('x11vnc', 'VNC_DEBUG', self.D_VNC_DEBUG).replace('"', '')
+
         except Exception, e:
             self.oe.dbg_log('services::load_values', 'ERROR: (%s)' % repr(e))
 
@@ -484,6 +617,78 @@ class services:
             self.oe.set_busy(0)
             self.oe.dbg_log('services::init_obex', 'ERROR: (' + repr(e) + ')', 4)
 
+    def initialize_mysql(self, **kwargs):
+        try:
+            self.oe.dbg_log('services::initialize_mysql', 'enter_function', 0)
+            self.oe.set_busy(1)
+            if 'listItem' in kwargs:
+                self.set_value(kwargs['listItem'])
+            state = 1
+            options = {}
+            if self.struct['mysql']['settings']['mysql_autostart']['value'] != '1':
+                state = 0
+            self.oe.set_service('mysqld', options, state)   
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_mysql', 'exit_function', 0)
+        except Exception, e:
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_mysql', 'ERROR: (' + repr(e) + ')', 4)
+
+    def initialize_minidlna(self, **kwargs):
+        try:
+            self.oe.dbg_log('services::initialize_minidlna', 'enter_function', 0)
+            self.oe.set_busy(1)
+            if 'listItem' in kwargs:
+                self.set_value(kwargs['listItem'])
+            state = 1
+            options = {}
+            if self.struct['minidlna']['settings']['minidlna_autostart']['value'] != '1':
+                state = 0
+            self.oe.set_service('minidlna', options, state)   
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_minidlna', 'exit_function', 0)
+        except Exception, e:
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_minidlna', 'ERROR: (' + repr(e) + ')', 4)
+
+    def initialize_ramclear(self, **kwargs):
+        try:
+            self.oe.dbg_log('services::initialize_ramclear', 'enter_function', 0)
+            self.oe.set_busy(1)
+            if 'listItem' in kwargs:
+                self.set_value(kwargs['listItem'])
+            state = 0
+            options = {}
+            if self.struct['ramclear']['settings']['ramclear_autostart']['value'] == '1':
+                state = 1
+                options['RAMCLEAR_TIME']  = '"%s"' % self.struct['ramclear']['settings']['ramclear_time']['value']
+            self.oe.set_service('ramclear', options, state)   
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_ramclear', 'exit_function', 0)
+        except Exception, e:
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_ramclear', 'ERROR: (' + repr(e) + ')', 4)
+
+    def initialize_vnc(self, **kwargs):
+        try:
+            self.oe.dbg_log('services::initialize_vnc', 'enter_function', 0)
+            self.oe.set_busy(1)
+            if 'listItem' in kwargs:
+                self.set_value(kwargs['listItem'])
+            state = 0
+            options = {}
+            if self.struct['x11vnc']['settings']['vnc_autostart']['value'] == '1':
+                state = 1
+                options['VNC_PORT']     = '"%s"' % self.struct['x11vnc']['settings']['vnc_port']['value']
+                options['VNC_PASSWORD'] = '"%s"' % self.struct['x11vnc']['settings']['vnc_password']['value']
+                options['VNC_DEBUG']    = '"%s"' % self.struct['x11vnc']['settings']['vnc_debug']['value']
+            self.oe.set_service('x11vnc', options, state)   
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_vnc', 'exit_function', 0)
+        except Exception, e:
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_vnc', 'ERROR: (' + repr(e) + ')', 4)
+
     def set_lcd_driver(self, listItem=None):
         try:
             self.oe.dbg_log('services::set_lcd_driver', 'enter_function', 0)
@@ -524,71 +729,3 @@ class services:
             self.oe.dbg_log('services::exit', 'exit_function', 0)
         except Exception, e:
             self.oe.dbg_log('services::exit', 'ERROR: (%s)' % repr(e), 4)
-
-    def do_wizard(self):
-        try:
-            self.oe.dbg_log('services::do_wizard', 'enter_function', 0)
-            self.oe.winOeMain.set_wizard_title(self.oe._(32311))
-            if hasattr(self, 'samba'):
-                self.oe.winOeMain.set_wizard_text(self.oe._(32313) + '[CR][CR]' + self.oe._(32312))
-            else:
-                self.oe.winOeMain.set_wizard_text(self.oe._(32312))
-            self.oe.winOeMain.set_wizard_button_title(self.oe._(32316))
-            self.set_wizard_buttons()
-            self.oe.dbg_log('services::do_wizard', 'exit_function', 0)
-        except Exception, e:
-            self.oe.dbg_log('services::do_wizard', 'ERROR: (%s)' % repr(e))
-
-    def set_wizard_buttons(self):
-        try:
-            self.oe.dbg_log('services::set_wizard_buttons', 'enter_function', 0)
-            if self.struct['ssh']['settings']['ssh_autostart']['value'] == '1':
-                self.oe.winOeMain.set_wizard_radiobutton_1(self.oe._(32201), self, 'wizard_set_ssh', True)
-            else:
-                self.oe.winOeMain.set_wizard_radiobutton_1(self.oe._(32201), self, 'wizard_set_ssh')
-            if not 'hidden' in self.struct['samba']:
-                if self.struct['samba']['settings']['samba_autostart']['value'] == '1':
-                    self.oe.winOeMain.set_wizard_radiobutton_2(self.oe._(32200), self, 'wizard_set_samba', True)
-                else:
-                    self.oe.winOeMain.set_wizard_radiobutton_2(self.oe._(32200), self, 'wizard_set_samba')
-            self.oe.dbg_log('services::set_wizard_buttons', 'exit_function', 0)
-        except Exception, e:
-            self.oe.dbg_log('services::set_wizard_buttons', 'ERROR: (%s)' % repr(e))
-
-    def wizard_set_ssh(self):
-        try:
-            self.oe.dbg_log('services::wizard_set_ssh', 'enter_function', 0)
-            if self.struct['ssh']['settings']['ssh_autostart']['value'] == '1':
-                self.struct['ssh']['settings']['ssh_autostart']['value'] = '0'
-            else:
-                self.struct['ssh']['settings']['ssh_autostart']['value'] = '1'
-
-            # ssh button does nothing if Kernel Parameter isset
-
-            cmd_file = open(self.KERNEL_CMD, 'r')
-            cmd_args = cmd_file.read()
-            if 'ssh' in cmd_args:
-                self.oe.notify('ssh', 'ssh enabled as boot parameter. can not disable')
-            cmd_file.close()
-            self.initialize_ssh()
-            self.load_values()
-            self.set_wizard_buttons()
-            self.oe.dbg_log('services::wizard_set_ssh', 'exit_function', 0)
-        except Exception, e:
-            self.oe.dbg_log('services::wizard_set_ssh', 'ERROR: (%s)' % repr(e))
-
-    def wizard_set_samba(self):
-        try:
-            self.oe.dbg_log('services::wizard_set_samba', 'enter_function', 0)
-            if self.struct['samba']['settings']['samba_autostart']['value'] == '1':
-                self.struct['samba']['settings']['samba_autostart']['value'] = '0'
-            else:
-                self.struct['samba']['settings']['samba_autostart']['value'] = '1'
-            self.initialize_samba()
-            self.load_values()
-            self.set_wizard_buttons()
-            self.oe.dbg_log('services::wizard_set_samba', 'exit_function', 0)
-        except Exception, e:
-            self.oe.dbg_log('services::wizard_set_samba', 'ERROR: (%s)' % repr(e))
-
-
