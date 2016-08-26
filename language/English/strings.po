@@ -1,5 +1,5 @@
 # Kodi Media Center language file
-# Addon Name: AlexELEC Configuration
+# Addon Name: @DISTRONAME@ Configuration
 # Addon id: service.alexelec.settings
 # Addon Provider: AlexELEC
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#600"
-msgid "AlexELEC Settings"
+msgid "@DISTRONAME@ Settings"
 msgstr ""
 
 msgctxt "#601"
@@ -53,7 +53,7 @@ msgid "Architecture: "
 msgstr ""
 
 msgctxt "#609"
-msgid "AlexELEC (Embedded Linux Entertainment Center) is a minimal Linux distribution purpose built for Kodi and VDR media center. AlexELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
+msgid "@DISTRONAME@ (Embedded Linux Entertainment Center) is a minimal Linux distribution purpose built for Kodi and VDR media center. @DISTRONAME@ is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configured media machine in under 15 minutes."
 msgstr ""
 
 msgctxt "#610"
@@ -61,7 +61,7 @@ msgid "[B]Support:[/B][CR]Web: http://www.alexelec.in.ua[CR]Forum: http://forum.
 msgstr ""
 
 msgctxt "#611"
-msgid "The AlexELEC project runs on goodwill, love, and your donations. If you would like to contribute to the project you can donate. Making a donation is easy and takes only a couple of minutes."
+msgid "The @DISTRONAME@ project runs on goodwill, love, and your donations. If you would like to contribute to the project you can donate. Making a donation is easy and takes only a couple of minutes."
 msgstr ""
 
 #empty strings from id 612 to 699
@@ -93,7 +93,7 @@ msgstr ""
 #empty strings from id 706 to 709
 
 msgctxt "#710"
-msgid "Configure the Hostname of your AlexELEC system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
+msgid "Configure the Hostname of your @DISTRONAME@ system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
 msgstr ""
 
 msgctxt "#711"
@@ -109,7 +109,7 @@ msgid "Configure the physical keyboard type"
 msgstr ""
 
 msgctxt "#714"
-msgid "AlexELEC can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgid "@DISTRONAME@ can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
 msgstr ""
 
 msgctxt "#715"
@@ -117,11 +117,11 @@ msgid "Set to ON and an on-screen notification will be displayed when a new upda
 msgstr ""
 
 msgctxt "#716"
-msgid "Click to manually check the AlexELEC servers for an updated release"
+msgid "Click to manually check the @DISTRONAME@ servers for an updated release"
 msgstr ""
 
 msgctxt "#717"
-msgid "If you have an small LCD or VFD attached to your AlexELEC system you must configure the correct display driver"
+msgid "If you have an small LCD or VFD attached to your @DISTRONAME@ system you must configure the correct display driver"
 msgstr ""
 
 #empty strings from id 718 to 719
@@ -133,7 +133,7 @@ msgstr ""
 #empty string with id 721
 
 msgctxt "#722"
-msgid "Create a tar archive containing all AlexELEC and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
+msgid "Create a tar archive containing all @DISTRONAME@ and Kodi configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
 msgstr ""
 
 msgctxt "#723"
@@ -141,11 +141,11 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr ""
 
 msgctxt "#724"
-msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset AlexELEC configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
+msgid "[COLOR FF00FF00]SOFT RESET[/COLOR]\nPermanently reset @DISTRONAME@ configuration to defaults (resets also Kodi to default including your library. your media - music/videos/etc are not touched)"
 msgstr ""
 
 msgctxt "#725"
-msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset AlexELEC and Kodi configuration to defaults (everything in your storage partition will be deleted)"
+msgid "[COLOR FFFF0000]HARD RESET[/COLOR]\nPermanently reset @DISTRONAME@ and Kodi configuration to defaults (everything in your storage partition will be deleted)"
 msgstr ""
 
 msgctxt "#726"
@@ -185,7 +185,7 @@ msgstr ""
 #empty string with id 735
 
 msgctxt "#736"
-msgid "Set to ON to delay AlexELEC startup until the network is available. Use this if the OS is booting into Kodi/VDR before the network is up and central MySQL databases are accessible."
+msgid "Set to ON to delay @DISTRONAME@ startup until the network is available. Use this if the OS is booting into Kodi/VDR before the network is up and central MySQL databases are accessible."
 msgstr ""
 
 msgctxt "#737"
@@ -231,7 +231,7 @@ msgid "750"
 msgstr ""
 
 msgctxt "#751"
-msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to AlexELEC."
+msgid "With OBEX filetransfer you can send files, for example movies or pictures over bluetooth to @DISTRONAME@."
 msgstr ""
 
 msgctxt "#752"
@@ -465,7 +465,7 @@ msgstr ""
 #empty strings from id 32151 to 32179
 
 msgctxt "#32180"
-msgid "Would you like to update AlexELEC now?"
+msgid "Would you like to update @DISTRONAME@ now?"
 msgstr ""
 
 msgctxt "#32181"
@@ -573,7 +573,7 @@ msgstr ""
 #empty strings from id 32217 to 32299
 
 msgctxt "#32300"
-msgid "Welcome to AlexELEC"
+msgid "Welcome to @DISTRONAME@"
 msgstr ""
 
 msgctxt "#32301"
@@ -581,7 +581,7 @@ msgid "Welcome"
 msgstr ""
 
 msgctxt "#32302"
-msgid "This wizard will guide you through the process of setting up your new AlexELEC installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > AlexELEC Settings."
+msgid "This wizard will guide you through the process of setting up your new @DISTRONAME@ installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > @DISTRONAME@ Settings."
 msgstr ""
 
 msgctxt "#32303"
@@ -589,7 +589,7 @@ msgid "Next"
 msgstr ""
 
 msgctxt "#32304"
-msgid "To be identified easily on the network, your new AlexELEC machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
+msgid "To be identified easily on the network, your new @DISTRONAME@ machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
 msgstr ""
 
 msgctxt "#32305"
@@ -597,7 +597,7 @@ msgid "Networking"
 msgstr ""
 
 msgctxt "#32306"
-msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, AlexELEC needs to be connected the Internet.[CR][CR]An Internet connection is also required for AlexELEC to automatically update itself."
+msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, @DISTRONAME@ needs to be connected the Internet.[CR][CR]An Internet connection is also required for @DISTRONAME@ to automatically update itself."
 msgstr ""
 
 #empty string with id 32307
@@ -617,11 +617,11 @@ msgid "Sharing and Remote Access"
 msgstr ""
 
 msgctxt "#32312"
-msgid "AlexELEC also supports SSH for remote access. This is for advanced users who wish to interact with AlexELEC's underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]mcpc[/COLOR]."
+msgid "@DISTRONAME@ also supports SSH for remote access. This is for advanced users who wish to interact with @DISTRONAME@'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]mcpc[/COLOR]."
 msgstr ""
 
 msgctxt "#32313"
-msgid "In order to share your files between your computers AlexELEC has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
+msgid "In order to share your files between your computers @DISTRONAME@ has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
 msgstr ""
 
 #empty strings from id 32314 to 32315
@@ -635,7 +635,7 @@ msgid "Thank you"
 msgstr ""
 
 msgctxt "#32318"
-msgid "Your AlexELEC installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]AlexELEC is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find AlexELEC useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using AlexELEC as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
+msgid "Your @DISTRONAME@ installation is now complete and you'll now enter Kodi when you can set up your media libraries. For help with this, there is a guide available at wiki.kodi.tv[CR][CR]@DISTRONAME@ is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find @DISTRONAME@ useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using @DISTRONAME@ as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at our website"
 msgstr ""
 
 msgctxt "#32319"
@@ -657,7 +657,7 @@ msgid "Reset System Settings to defaults"
 msgstr ""
 
 msgctxt "#32325"
-msgid "Reset AlexELEC to defaults"
+msgid "Reset @DISTRONAME@ to defaults"
 msgstr ""
 
 msgctxt "#32326"
@@ -735,7 +735,7 @@ msgid "Check for updates now:"
 msgstr ""
 
 msgctxt "#32363"
-msgid "AlexELEC"
+msgid "@DISTRONAME@"
 msgstr ""
 
 msgctxt "#32364"
