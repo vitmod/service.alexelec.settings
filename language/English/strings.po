@@ -1123,3 +1123,65 @@ msgstr ""
 msgctxt "#3434"
 msgid "Select from the list of log level AceProxy."
 msgstr ""
+
+########## DVB_DEVICE #########
+
+msgctxt "#35000"
+msgid "DVB Devices"
+msgstr ""
+
+msgctxt "#3500"
+msgid "Configure DVB devices and drivers."
+msgstr ""
+
+### DVB_DRIVERS ###
+
+msgctxt "#35010"
+msgid "DVB Drivers"
+msgstr ""
+
+msgctxt "#35011"
+msgid "Select DVB Drivers:"
+msgstr ""
+
+msgctxt "#3511"
+msgid "Select the drivers for your DVB device. CORE - Linux kernel drivers, TBS - for TBS adapters (www.tbsdtv.com), MEDIA - media_build drivers.\nTo take effect, the system needs to be rebooted."
+msgstr ""
+
+msgctxt "#35012"
+msgid "DVB info"
+msgstr ""
+
+msgctxt "#3512"
+msgid "Information about the current drivers and adapters."
+msgstr ""
+
+### WAIT DVB ###
+
+msgctxt "#35020"
+msgid "Wait DVB adapter"
+msgstr ""
+
+msgctxt "#35021"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#3521"
+msgid "Wait for DVB before starting shell."
+msgstr ""
+
+msgctxt "#35022"
+msgid "Wait adapter num #"
+msgstr ""
+
+msgctxt "#3522"
+msgid "Please select number of the adapter, which the system will wait before starting the application."
+msgstr ""
+
+msgctxt "#35023"
+msgid "Wait time (sec.)"
+msgstr ""
+
+msgctxt "#3523"
+msgid "Limit wait time."
+msgstr ""

@@ -1,7 +1,7 @@
 #!/bin/sh
 ################################################################################
 #      This file is part of Alex@ELEC - http://www.alexelec.in.ua
-#      Copyright (C) 2011-2015 Alexandr Zuyev (alex@alexelec.in.ua)
+#      Copyright (C) 2011-2016 Alexandr Zuyev (alex@alexelec.in.ua)
 ################################################################################
 
 card=$1
@@ -20,7 +20,7 @@ pcm.!default {
 }
 EOF
 
-echo "Completed!"
+echo "OK"
 else
-echo "Error!"
+echo "ERROR"
 fi

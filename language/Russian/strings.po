@@ -1029,3 +1029,65 @@ msgstr "Уровень отладки"
 msgctxt "#3434"
 msgid "Select from the list of log level AceProxy."
 msgstr "Выберите из списка уровень ведения журнала AceProxy."
+
+########## DVB_DEVICE #########
+
+msgctxt "#35000"
+msgid "DVB Devices"
+msgstr "DVB устройства"
+
+msgctxt "#3500"
+msgid "Configure DVB devices and drivers."
+msgstr "Настройки DVB адаптеров, выбор драйверов."
+
+### DVB_DRIVERS ###
+
+msgctxt "#35010"
+msgid "DVB Drivers"
+msgstr "DVB Драйвера"
+
+msgctxt "#35011"
+msgid "Select DVB Drivers:"
+msgstr "Выбрать DVB драйвера:"
+
+msgctxt "#3511"
+msgid "Select the drivers for your DVB device. CORE - Linux kernel drivers, TBS - for TBS adapters (www.tbsdtv.com), MEDIA - media_build drivers.\nTo take effect, the system needs to be rebooted."
+msgstr "Выберите драйвера для Вашего DVB адаптера. CORE - драйвера ядра Linux, TBS - для адаптеров TBS (www.tbsdtv.com), MEDIA - драйвера media_build.\nДля вступления изменений в силу требуется перезагрузка системы."
+
+msgctxt "#35012"
+msgid "DVB info"
+msgstr "Информация о DVB"
+
+msgctxt "#3512"
+msgid "Information about the current drivers and adapters."
+msgstr "Информация о текущих драйверах и DVB адаптерах."
+
+### WAIT DVB ###
+
+msgctxt "#35020"
+msgid "Wait DVB adapter"
+msgstr "Ожидать DVB адаптер"
+
+msgctxt "#35021"
+msgid "Enable"
+msgstr "Включить"
+
+msgctxt "#3521"
+msgid "Wait for DVB before starting shell."
+msgstr "Если включено - программы использующие DVB адаптеры будут ожидать перед стартом инициализацию устройства."
+
+msgctxt "#35022"
+msgid "Wait adapter num #"
+msgstr "Ожидать адаптер #"
+
+msgctxt "#3522"
+msgid "Please select number of the adapter, which the system will wait before starting the application."
+msgstr "Выберите номер устройства из списка."
+
+msgctxt "#35023"
+msgid "Wait time (sec.)"
+msgstr "Время ожидания (сек.)"
+
+msgctxt "#3523"
+msgid "Limit wait time."
+msgstr "Максимальное время ожидания устройства."

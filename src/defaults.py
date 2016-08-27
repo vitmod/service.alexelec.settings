@@ -121,6 +121,23 @@ ace = {
     'D_ACEPROXY_ALWAYS' : '0',
     }
 
+################################################################################
+# DVB device Module
+################################################################################
+
+dvbdev = {
+    'ENABLED': True,
+    'GET_DVB_FRONTEND' : "%s/dvbdev.sh" % SCRIPT_DIR,
+    'GET_DVB_DRIVER'   : "ls -l /storage/.modules/* | awk -F\/ '{print $7}' |  awk -F\- '{print $2}'",
+    'D_DVB_DRIVERS'    : 'CORE',
+    'GET_DVB_DRVLIST'  : "%s/dvbdrv.sh" % SCRIPT_DIR,
+    'DVB_LIST_TEMP'    : "/tmp/dvb-drv.tmp",
+    #WAIT DVB FRONTEND
+    'COUNT_DVB'        : "ls -1 /dev/dvb/adapter*/frontend* | wc -l",
+    'D_DVB_NUMBER'     : '0',
+    'D_DVB_TIME'       : '5',
+    }
+
 about = {'ENABLED': True}
 
 xdbus = {'ENABLED': True}
