@@ -97,6 +97,10 @@ system = {
     'D_DISABLE_CURSOR': '0',
     }
 
+about = {'ENABLED': True}
+
+xdbus = {'ENABLED': True}
+
 ################################################################################
 # AceStream & AceProxy Module
 ################################################################################
@@ -138,9 +142,20 @@ dvbdev = {
     'D_DVB_TIME'       : '5',
     }
 
-about = {'ENABLED': True}
+################################################################################
+# CAMD server Module
+################################################################################
 
-xdbus = {'ENABLED': True}
+camd = {
+    'ENABLED'        : True,
+    'D_WICARD_TYPE'  : 'TVON',
+    'D_WICARD_DEBUG' : '0',
+    'D_OSCAM_TYPE'   : 'TVON',
+    }
+
+################################################################################
+# Services
+################################################################################
 
 _services = {
     'sshd': ['sshd.service'],
@@ -154,6 +169,8 @@ _services = {
     'minidlna': ['minidlna.service'],
     'ramclear': ['drop-ram.service'],
     'x11vnc': ['x11vnc.service'],
-    'acestream' : ['acestream.service'],
-    'aceproxy' : ['aceproxy.service'],
+    'acestream': ['acestream.service'],
+    'aceproxy': ['aceproxy.service'],
+    'wicard': ['wicard.service'],
+    'oscam': ['oscam.service'],
     }

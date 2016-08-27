@@ -1091,3 +1091,65 @@ msgstr "Время ожидания (сек.)"
 msgctxt "#3523"
 msgid "Limit wait time."
 msgstr "Максимальное время ожидания устройства."
+
+########## CAMD #########
+
+msgctxt "#36000"
+msgid "CAMD"
+msgstr "CAMD"
+
+msgctxt "#3600"
+msgid "CAMD Services: Wicard and Oscam servers configuration."
+msgstr "Настройка CAMD серверов: Wicard и Oscam."
+
+### WICARD ###
+
+msgctxt "#36010"
+msgid "Wicard server"
+msgstr "Wicard сервер"
+
+msgctxt "#36011"
+msgid "Enable Wicard"
+msgstr "Включить Wicard"
+
+msgctxt "#3611"
+msgid "This emulator works not only with Sharing servers but also as an emulator for official cards."
+msgstr "Данный эмулятор работает не только с шаринг-серверами но и как эмулятор для официальных карт."
+
+msgctxt "#36012"
+msgid "Start mode Wicard:"
+msgstr "Режим запуска Wicard:"
+
+msgctxt "#3612"
+msgid "Start mode Wicard: ALL (always) or TVON (TV only)."
+msgstr "Режим запуска Wicard: Всегда (ALL) или только ТВ (TVON). В режиме TVON - Wicard запускается и останавливается вместе с ТВ приложениями (VDR, Tvheadend)."
+
+msgctxt "#36013"
+msgid "Enable Debug"
+msgstr "Включить отладку"
+
+msgctxt "#3613"
+msgid "Enable debugging Wicard."
+msgstr "Включить ведение журнала работы Wicard."
+
+### OSCAM_DAEMON ###
+
+msgctxt "#36020"
+msgid "Oscam server"
+msgstr "Oscam сервер"
+
+msgctxt "#36021"
+msgid "Enable Oscam"
+msgstr "Включить Oscam"
+
+msgctxt "#3621"
+msgid "OSCam is an Open Source Conditional Access Module software, based on the very good MpCS version 0.9d."
+msgstr "OSCAM представляет собой Условный Модуль Доступа с открытым исходным кодом, основанный на очень хорошем MpCS версии 0.9d."
+
+msgctxt "#36022"
+msgid "Start mode Oscam:"
+msgstr "Режим запуска Oscam:"
+
+msgctxt "#3622"
+msgid "Start mode Oscam: ALL (always) or TVON (TV only)."
+msgstr "Режим запуска Oscam: Всегда (ALL) или только ТВ (TVON). В режиме TVON - Oscam запускается и останавливается вместе с ТВ приложениями (VDR, Tvheadend)."

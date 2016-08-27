@@ -1185,3 +1185,65 @@ msgstr ""
 msgctxt "#3523"
 msgid "Limit wait time."
 msgstr ""
+
+########## CAMD #########
+
+msgctxt "#36000"
+msgid "CAMD"
+msgstr ""
+
+msgctxt "#3600"
+msgid "CAMD Services: Wicard and Oscam servers configuration."
+msgstr ""
+
+### WICARD ###
+
+msgctxt "#36010"
+msgid "Wicard server"
+msgstr ""
+
+msgctxt "#36011"
+msgid "Enable Wicard"
+msgstr ""
+
+msgctxt "#3611"
+msgid "This emulator works not only with Sharing servers but also as an emulator for official cards."
+msgstr ""
+
+msgctxt "#36012"
+msgid "Start mode Wicard:"
+msgstr ""
+
+msgctxt "#3612"
+msgid "Start mode Wicard: ALL (always) or TVON (TV only)."
+msgstr ""
+
+msgctxt "#36013"
+msgid "Enable Debug"
+msgstr ""
+
+msgctxt "#3613"
+msgid "Enable debugging Wicard."
+msgstr ""
+
+### OSCAM_DAEMON ###
+
+msgctxt "#36020"
+msgid "Oscam server"
+msgstr ""
+
+msgctxt "#36021"
+msgid "Enable Oscam"
+msgstr ""
+
+msgctxt "#3621"
+msgid "OSCam is an Open Source Conditional Access Module software, based on the very good MpCS version 0.9d."
+msgstr ""
+
+msgctxt "#36022"
+msgid "Start mode Oscam:"
+msgstr ""
+
+msgctxt "#3622"
+msgid "Start mode Oscam: ALL (always) or TVON (TV only)."
+msgstr ""
