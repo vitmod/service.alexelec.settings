@@ -983,3 +983,143 @@ msgstr ""
 msgctxt "#3331"
 msgid "Disable mouse cursor.\nTo take effect, the system needs to be rebooted."
 msgstr ""
+
+########## ACESTREAM #########
+
+msgctxt "#34000"
+msgid "AceStream"
+msgstr ""
+
+msgctxt "#3400"
+msgid "AceStream and AceProxy services config."
+msgstr ""
+
+msgctxt "#34010"
+msgid "AceStream Engine"
+msgstr ""
+
+msgctxt "#34011"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#3411"
+msgid "Ace Stream is an innovative multimedia platform of a new generation. Ace Stream uses in its core, P2P (peer-to-peer) technology, BitTorrent protocol, which is acknowledged as the most effective protocol to transfer content."
+msgstr ""
+
+msgctxt "#34012"
+msgid "Login:"
+msgstr ""
+
+msgctxt "#3412"
+msgid "Enter your user name to access the service AceStream (https://m.acestream.net)."
+msgstr ""
+
+msgctxt "#34013"
+msgid "Password:"
+msgstr ""
+
+msgctxt "#3413"
+msgid "Enter the password to access the service AceStream (https://m.acestream.net)."
+msgstr ""
+
+msgctxt "#34014"
+msgid "Live buffer (sec.)"
+msgstr ""
+
+msgctxt "#3414"
+msgid "Live buffer is an important setting as it determines how much time (in seconds) we want to use for our streaming buffer."
+msgstr ""
+
+msgctxt "#34015"
+msgid "Cache type"
+msgstr ""
+
+msgctxt "#3415"
+msgid "Cache type: disk - store the cache on the disk, memory - store the cache in random-access memory."
+msgstr ""
+
+msgctxt "#34016"
+msgid "Cache limit (Gb)"
+msgstr ""
+
+msgctxt "#3416"
+msgid "The disk cache limit allows use to set a maximum limit for how much space the cache can use."
+msgstr ""
+
+msgctxt "#34017"
+msgid "Live cache size (bytes)"
+msgstr ""
+
+msgctxt "#3417"
+msgid "Maximum size of the cache in bytes (default: 20971520 bytes (20 MB))."
+msgstr ""
+
+msgctxt "#34018"
+msgid "Cache dir"
+msgstr ""
+
+msgctxt "#3418"
+msgid "Select folder for cache."
+msgstr ""
+
+msgctxt "#34019"
+msgid "Clear cache"
+msgstr ""
+
+msgctxt "#3419"
+msgid "The cache on the disk is removed before the start AceStream."
+msgstr ""
+
+msgctxt "#34020"
+msgid "Debug"
+msgstr ""
+
+msgctxt "#3420"
+msgid "Enable advanced debugging AceStream."
+msgstr ""
+
+msgctxt "#34021"
+msgid "Never stop"
+msgstr ""
+
+msgctxt "#3421"
+msgid "Do not stop the service when the KODI is closed."
+msgstr ""
+
+########## ACEPROXY #########
+
+msgctxt "#34030"
+msgid "AceProxy Server"
+msgstr ""
+
+msgctxt "#34031"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#3431"
+msgid "AceProxy allows you to watch Ace Stream live streams or BitTorrent files over HTTP."
+msgstr ""
+
+msgctxt "#34032"
+msgid "Login:"
+msgstr ""
+
+msgctxt "#3432"
+msgid "Enter your user name to access the service Torrent-TV (http://torrent-tv.ru)."
+msgstr ""
+
+msgctxt "#34033"
+msgid "Password:"
+msgstr ""
+
+msgctxt "#3433"
+msgid "Enter the password to access the service Torrent-TV (http://torrent-tv.ru)."
+msgstr ""
+
+msgctxt "#34034"
+msgid "Debug level"
+msgstr ""
+
+msgctxt "#3434"
+msgid "Select from the list of log level AceProxy."
+msgstr ""

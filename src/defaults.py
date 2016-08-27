@@ -97,6 +97,30 @@ system = {
     'D_DISABLE_CURSOR': '0',
     }
 
+################################################################################
+# AceStream & AceProxy Module
+################################################################################
+
+ace = {
+    'ENABLED': True,
+    #ACESTREAM
+    'D_ACE_CACHE_TYPE'        : 'memory',
+    'D_ACE_CACHE_LIMIT'       : '5',
+    'D_ACE_LIFE_CACHE_SIZE'   : '20971520',
+    'D_ACE_LIFE_BUFFER'       : '60',
+    'D_ACE_CACHE_DIR'         : '/storage/.ACEStream/.acestream_cache',
+    'D_ACE_CLEAN_CACHE'       : '0',
+    'D_ACE_DEBUG'             : '0',
+    'D_ACE_LOGIN'             : '',
+    'D_ACE_PASSW'             : '',
+    'D_ACE_ALWAYS'            : '0',
+    #ACEPROXY
+    'D_ACEPROXY_LOGIN'  : '',
+    'D_ACEPROXY_PASSW'  : '',
+    'D_ACEPROXY_DEBUG'  : 'INFO',
+    'D_ACEPROXY_ALWAYS' : '0',
+    }
+
 about = {'ENABLED': True}
 
 xdbus = {'ENABLED': True}
@@ -113,4 +137,6 @@ _services = {
     'minidlna': ['minidlna.service'],
     'ramclear': ['drop-ram.service'],
     'x11vnc': ['x11vnc.service'],
+    'acestream' : ['acestream.service'],
+    'aceproxy' : ['aceproxy.service'],
     }
