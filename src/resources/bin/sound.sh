@@ -20,7 +20,7 @@ pcm.!default {
 }
 EOF
 
-echo "OK"
+echo "Completed!"
 else
-echo "ERROR"
+echo "Error!"
 fi
