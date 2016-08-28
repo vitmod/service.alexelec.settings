@@ -181,6 +181,52 @@ tvbackend = {
     }
 
 ################################################################################
+# VDR Frontend Module
+################################################################################
+
+tvshell = {
+    'ENABLED'         : True,
+    #VDR START
+    'D_VDR_SHELL'     : '0',
+    'D_VDR_DEBUG'     : '0',
+    'D_VDR_VIDEO_DIR' : '/storage/recordings/',
+
+    #VDR PLUGINS
+    'D_VDR_DVBAPI'            : '1',
+    'D_VDR_IPTV'              : '0',
+    'D_VDR_IPTV_DEVICES'      : '1',
+    'D_VDR_SATIP'             : '0',
+    'D_VDR_EPGSEARCH'         : '1',
+    'D_VDR_STREAMDEV_SERVER'  : '0',
+    'D_VDR_STREAMDEV_CLIENT'  : '0',
+    'D_VDR_CHSCAN'            : '0',
+    'D_VDR_FEMON'             : '1',
+    'D_VDR_SYSINFO'           : '1',
+    'D_VDR_SLEEP'             : '0',
+    'D_VDR_PVR'               : 'none',
+    'D_VDR_TVSCRAPER'         : '0',
+    'D_VDR_SKIN_NOPACITY'     : '0',
+    'D_VDR_WEATHER'           : '0',
+    'D_VDR_SKIN_DESIGNER'     : '0',
+    'D_VDR_TVGUIDENG'         : '0',
+    'D_VDR_ZAPHISTORY'        : '0',
+    'D_VDR_LIVE'              : '0',
+
+    #VDR LOGOS
+    'URL_LOGOS_FILE'      : "http://src.alexelec.in.ua/logos/logos.tar.bz2",
+    'RUN_LOGOS'           : "%s/logos.sh" % SCRIPT_DIR,
+    'GET_LOGO_COUNT'      : "wc -l /storage/.kodi/temp/logos_src/src_file.tmp | awk '{print $1}'",
+    'GET_MISS_COUNT'      : "wc -l /tmp/miss_logo.log | awk '{print $1}'",
+    'LOGO_GET_LOG'        : "tail -n1 /tmp/logo_conv.log",
+    'KILL_LOGO_SH'        : "killall -9 logos.sh",
+    'D_LOGOS_DIR'         : '/storage/.config/vdr/plugins/skindesigner/logos/',
+    'D_LOGOS_CLEAR'       : '0',
+    'D_LOGOS_BG_COLOR'    : 'White',
+    'D_LOGOS_FG_COLOR'    : '4',
+    'D_LOGOS_TEXT_COLOR'  : 'black',
+    }
+
+################################################################################
 # Services
 ################################################################################
 

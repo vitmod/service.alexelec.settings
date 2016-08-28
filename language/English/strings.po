@@ -1405,3 +1405,255 @@ msgstr ""
 msgctxt "#3735"
 msgid "Wait network before the start TVH (no more than)."
 msgstr ""
+
+########## VDR Frontend #########
+
+msgctxt "#38000"
+msgid "TV shell"
+msgstr ""
+
+msgctxt "#3800"
+msgid "Configure VDR (Video Disk Recorder) and channels logos."
+msgstr ""
+
+msgctxt "#38010"
+msgid "VDR Configuration"
+msgstr ""
+
+msgctxt "#38011"
+msgid "Enable VDR"
+msgstr ""
+
+msgctxt "#3811"
+msgid "VDR is Digital Receiver (DVB-T/T2, DVB-S/S2, DVB-C) and Video Recorder with lots of features (Timeshifting, EPG, ext...)."
+msgstr ""
+
+msgctxt "#38012"
+msgid "Run the first VDR"
+msgstr ""
+
+msgctxt "#3812"
+msgid "If enabled - the first VDR loaded, otherwise - Kodi."
+msgstr ""
+
+msgctxt "#38013"
+msgid "Enable Debug"
+msgstr ""
+
+msgctxt "#3813"
+msgid "Enable debugging VDR."
+msgstr ""
+
+msgctxt "#38014"
+msgid "Directory for records"
+msgstr ""
+
+msgctxt "#3814"
+msgid "Directory for records (default: /storage/recordings)."
+msgstr ""
+
+msgctxt "#38015"
+msgid "Enable plugin: dvbapi"
+msgstr ""
+
+msgctxt "#3815"
+msgid "The plugin allows connect VDR to Wicard/Oscam. It creates a software CAM in VDR and communicates with Wicard/Oscam over camd.socket (using 'dvbapi' module)."
+msgstr ""
+
+msgctxt "#38016"
+msgid "Enable plugin: IPTV"
+msgstr ""
+
+msgctxt "#3816"
+msgid "This plugin integrates multicast/unicast IPTV transport streams seamlessly into VDR."
+msgstr ""
+
+msgctxt "#38017"
+msgid "IPTV devices"
+msgstr ""
+
+msgctxt "#3817"
+msgid "Number of devices to be created for IPTV."
+msgstr ""
+
+msgctxt "#38018"
+msgid "Enable plugin: SATIP"
+msgstr ""
+
+msgctxt "#3818"
+msgid "Integrates SAT>IP network devices seamlessly into VDR."
+msgstr ""
+
+msgctxt "#38019"
+msgid "Enable plugin: epgsearch"
+msgstr ""
+
+msgctxt "#3819"
+msgid "EPGSearch can be used to replace the standard schedule and extends this by many usefull functions."
+msgstr ""
+
+msgctxt "#38020"
+msgid "Enable plugin: streamdev-server"
+msgstr ""
+
+msgctxt "#3820"
+msgid "With streamdev-server plugin you can stream live TV via network."
+msgstr ""
+
+msgctxt "#38021"
+msgid "Enable plugin: streamdev-client"
+msgstr ""
+
+msgctxt "#3821"
+msgid "With streamdev-client plugin you can receive live TV streams via network."
+msgstr ""
+
+msgctxt "#38022"
+msgid "Enable plugin: channelscan"
+msgstr ""
+
+msgctxt "#3822"
+msgid "Channelscan plugin It channel scanner for VDR."
+msgstr ""
+
+msgctxt "#38023"
+msgid "Enable plugin: femon"
+msgstr ""
+
+msgctxt "#3823"
+msgid "Femon plugin shows DVB signal information on the OSD."
+msgstr ""
+
+msgctxt "#38024"
+msgid "Enable plugin: systeminfo"
+msgstr ""
+
+msgctxt "#3824"
+msgid "Systeminfo plugin shows information about the system (OS, CPU, Memory...)."
+msgstr ""
+
+msgctxt "#38025"
+msgid "Enable plugin: sleeptimer"
+msgstr ""
+
+msgctxt "#3825"
+msgid "Shutdown, sleep, mute or execute a custom command after a configurable timespan."
+msgstr ""
+
+msgctxt "#38026"
+msgid "Select stream plugin:"
+msgstr ""
+
+msgctxt "#3826"
+msgid "Select stream plugin for KODI PVR: xvdr, vnsiserver or none."
+msgstr ""
+
+msgctxt "#38027"
+msgid "Enable plugin: tvscraper"
+msgstr ""
+
+msgctxt "#3827"
+msgid "Runs in the background and collects metadata for all available EPG events."
+msgstr ""
+
+msgctxt "#38028"
+msgid "Enable skin: nOpacity"
+msgstr ""
+
+msgctxt "#3828"
+msgid "nOpacity is a highly customizable native true color skin for the Video Disc Recorder."
+msgstr ""
+
+msgctxt "#38029"
+msgid "Enable plugin: weatherforecast"
+msgstr ""
+
+msgctxt "#3829"
+msgid "WeatherForecast provides a weather forecast based on forecast.io data."
+msgstr ""
+
+msgctxt "#38030"
+msgid "Enable plugin: skindesigner"
+msgstr ""
+
+msgctxt "#3830"
+msgid "A VDR skinning engine that displays XML based Skins."
+msgstr ""
+
+msgctxt "#38031"
+msgid "Enable plugin: tvguideng"
+msgstr ""
+
+msgctxt "#3831"
+msgid "TvGuideNG is a highly customizable 2D EPG viewer plugin for Skindesigner Skins."
+msgstr ""
+
+msgctxt "#38032"
+msgid "Enable plugin: zaphistory"
+msgstr ""
+
+msgctxt "#3832"
+msgid "Zaphistory-plugin provide a history of the latest viewed channels with statistics informations."
+msgstr ""
+
+msgctxt "#38033"
+msgid "Enable plugin: live"
+msgstr ""
+
+msgctxt "#3833"
+msgid "LIVE, the LIVE Interactive VDR Environment, allows a comfortable operation of VDR and some of its plugins trough a web interface."
+msgstr ""
+
+### Channel logos ###
+
+msgctxt "#38050"
+msgid "VDR logos channels"
+msgstr ""
+
+msgctxt "#38051"
+msgid "Logos Dir"
+msgstr ""
+
+msgctxt "#3851"
+msgid "Directory logos channels for VDR."
+msgstr ""
+
+msgctxt "#38052"
+msgid "Clear Logos"
+msgstr ""
+
+msgctxt "#3852"
+msgid "If enabled old logos of channels will be removed."
+msgstr ""
+
+msgctxt "#38053"
+msgid "Background color"
+msgstr ""
+
+msgctxt "#3853"
+msgid "Background logos color."
+msgstr ""
+
+msgctxt "#38054"
+msgid "Foreground color"
+msgstr ""
+
+msgctxt "#3854"
+msgid "Foreground logos color."
+msgstr ""
+
+msgctxt "#38055"
+msgid "Text color"
+msgstr ""
+
+msgctxt "#3855"
+msgid "Text logos color."
+msgstr ""
+
+msgctxt "#38056"
+msgid "Create logos"
+msgstr ""
+
+msgctxt "#3856"
+msgid "Create logos channels for VDR."
+msgstr ""
