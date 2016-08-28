@@ -166,7 +166,7 @@ class dvbdev:
                 if not arrDvbCount is None:
                     self.struct['dvb-wait']['settings']['dvb_number']['values'] = arrDvbCount
                 self.struct['dvb-wait']['settings']['dvb_number']['value'] = \
-                self.oe.get_service_option('dvb-wait', 'DVB_NUMBER', self.DVB_NUMBER).replace('"', '')
+                self.oe.get_service_option('dvb-wait', 'DVB_NUMBER', self.D_DVB_NUMBER).replace('"', '')
                 self.struct['dvb-wait']['settings']['wait_time']['value'] = \
                 self.oe.get_service_option('dvb-wait', 'DVB_TIME', self.D_DVB_TIME).replace('"', '')
             else:

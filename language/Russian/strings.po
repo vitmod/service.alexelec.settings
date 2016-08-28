@@ -1153,3 +1153,161 @@ msgstr "Режим запуска Oscam:"
 msgctxt "#3622"
 msgid "Start mode Oscam: ALL (always) or TVON (TV only)."
 msgstr "Режим запуска Oscam: Всегда (ALL) или только ТВ (TVON). В режиме TVON - Oscam запускается и останавливается вместе с ТВ приложениями (VDR, Tvheadend)."
+
+########## TV BACKENDS #########
+
+msgctxt "#37000"
+msgid "TV Backends"
+msgstr "ТВ Сервисы"
+
+msgctxt "#3700"
+msgid "Configuration TV Backends for KODI: VDR and Tvheadend services."
+msgstr "Настройка ТВ Сервисов для KODI: VDR и Tvheadend."
+
+### VDR ###
+
+msgctxt "#37010"
+msgid "VDR Configuration"
+msgstr "Конфигурация VDR"
+
+msgctxt "#37011"
+msgid "Enable VDR"
+msgstr "Включить VDR"
+
+msgctxt "#3711"
+msgid "VDR is Digital Receiver (DVB-T/T2, DVB-S/S2, DVB-C) and Video Recorder with lots of features (Timeshifting, EPG, ext...)."
+msgstr "VDR это цифровой ресивер (DVB-T/T2, DVB-S/S2, DVB-C) и видеорекордер с множеством функций (например: режим отложенного просмотра, программирование таймера записи, EPG и т.д.)."
+
+msgctxt "#37012"
+msgid "Enable Debug"
+msgstr "Включить отладку"
+
+msgctxt "#3712"
+msgid "Enable debugging VDR."
+msgstr "Включить ведение журнала работы VDR."
+
+msgctxt "#37013"
+msgid "Directory for records"
+msgstr "Каталог записей"
+
+msgctxt "#3713"
+msgid "Directory for records (default: /storage/recordings)."
+msgstr "Выберите каталог для записей (по умолчанию: /storage/recordings)."
+
+msgctxt "#37014"
+msgid "Enable plugin: dvbapi"
+msgstr "Плагин: dvbapi"
+
+msgctxt "#3714"
+msgid "The plugin allows connect VDR to Wicard/Oscam. It creates a software CAM in VDR and communicates with Wicard/Oscam over camd.socket (using 'dvbapi' module)."
+msgstr "Плагин для работы с CAMD-серверами Wicard/Oscam. Плагин создает программный CAM в VDR, и общается с Wicard/Oscam через camd.socket (с помощью модуля 'dvbapi')."
+
+msgctxt "#37015"
+msgid "Stream plugin:"
+msgstr "Плагин вещания для KODI:"
+
+msgctxt "#3715"
+msgid "Select stream plugin for KODI PVR: xvdr, vnsiserver or none for disable."
+msgstr "Выберите плагин вещания для KODI PVR: vnsiserver, xvdr или none для отключения."
+
+msgctxt "#37016"
+msgid "Enable plugin: IPTV"
+msgstr "Плагин: IPTV"
+
+msgctxt "#3716"
+msgid "This plugin integrates multicast/unicast IPTV transport streams seamlessly into VDR."
+msgstr "Этот плагин интегрирует multicast/unicast (http/udp) транспортные потоки IPTV в VDR."
+
+msgctxt "#37017"
+msgid "IPTV devices"
+msgstr "IPTV устройства"
+
+msgctxt "#3717"
+msgid "Number of devices to be created for IPTV."
+msgstr "Количество устройств, которые будут созданы для IPTV."
+
+msgctxt "#37018"
+msgid "Enable plugin: SATIP"
+msgstr "Плагин: SATIP"
+
+msgctxt "#3718"
+msgid "Integrates SAT>IP network devices seamlessly into VDR."
+msgstr "Интеграция сетевых устройств SAT>IP в VDR."
+
+msgctxt "#37019"
+msgid "Enable plugin: streamdev-server"
+msgstr "Плагин: streamdev-server"
+
+msgctxt "#3719"
+msgid "With streamdev-server plugin you can stream live TV via network."
+msgstr "С плагином streamdev-server вы можете транслировать ТВ по сети."
+
+msgctxt "#37020"
+msgid "Enable plugin: streamdev-client"
+msgstr "Плагин: streamdev-client"
+
+msgctxt "#3720"
+msgid "With streamdev-client plugin you can receive live TV streams via network."
+msgstr "С плагином streamdev-client вы можете получать трансляцию ТВ по сети с другой машины где работает streamdev-server."
+
+msgctxt "#37021"
+msgid "Enable plugin: channelscan"
+msgstr "Плагин: channelscan"
+
+msgctxt "#3721"
+msgid "Channelscan plugin It channel scanner for VDR."
+msgstr "Сканер каналов для VDR."
+
+msgctxt "#37022"
+msgid "Enable plugin: live"
+msgstr "Плагин: live"
+
+msgctxt "#3722"
+msgid "LIVE, the LIVE Interactive VDR Environment, allows a comfortable operation of VDR and some of its plugins trough a web interface."
+msgstr "LIVE - интерактивный веб-интерфейс для VDR. Программа передач, таймеры, записи, удаленное управление.\nWeb: http://ip-address:8008\nLogin: admin\nPassword: live"
+
+### TVHEADEND ###
+
+msgctxt "#37030"
+msgid "Tvheadend Configuration"
+msgstr "Конфигурация Tvheadend"
+
+msgctxt "#37031"
+msgid "Enable Tvheadend"
+msgstr "Включить Tvheadend"
+
+msgctxt "#3731"
+msgid "Tvheadend is a TV streaming server and recorder supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT>IP as input sources."
+msgstr "Tvheadend это ТВ сервер потокового вещания и рекордер для Linux, поддерживает DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT>IP в качестве входных источников."
+
+msgctxt "#37032"
+msgid "Enable Debug"
+msgstr "Включить отладку"
+
+msgctxt "#3732"
+msgid "Enable debugging Tvheadend."
+msgstr "Вести журнал работы Tvheadend."
+
+msgctxt "#37033"
+msgid "Tvheadend Backup"
+msgstr "Включить резервирование"
+
+msgctxt "#3733"
+msgid "Backup configuration tree at upgrade."
+msgstr "Резервное сохранение конфигурации при обновлении."
+
+msgctxt "#37034"
+msgid "Tvheadend bind address:"
+msgstr "IP-адрес:"
+
+msgctxt "#3734"
+msgid "Specify an interface IP address on which incoming HTTP and HTSP connections will be accepted. By default, connections are accepted on All interfaces."
+msgstr "Укажите IP-адрес интерфейса, на котором входящие HTTP и HTSP соединения будут приняты. По умолчанию, соединения принимаются на всех (All) интерфейсах."
+
+msgctxt "#37035"
+msgid "Timeout (sec.)"
+msgstr "Таймаут (сек.)"
+
+msgctxt "#3735"
+msgid "Wait network before the start TVH (no more than)."
+msgstr "Ожидать сеть перед стартом Tvheadend (не более чем)."

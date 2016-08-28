@@ -154,6 +154,33 @@ camd = {
     }
 
 ################################################################################
+# TV-Backend Module
+################################################################################
+
+tvbackend = {
+    'ENABLED'        : True,
+    #VDR BACKEND
+    'D_BVDR_DEBUG'             : '0',
+    'D_BVDR_VIDEO_DIR'         : '/storage/recordings/',
+    'D_BVDR_DVBAPI'            : '1',
+    'D_BVDR_PVR'               : 'xvdr',
+    'D_BVDR_IPTV'              : '0',
+    'D_BVDR_IPTV_DEVICES'      : '1',
+    'D_BVDR_SATIP'             : '0',
+    'D_BVDR_STREAMDEV_SERVER'  : '0',
+    'D_BVDR_STREAMDEV_CLIENT'  : '0',
+    'D_BVDR_CHSCAN'            : '0',
+    'D_BVDR_LIVE'              : '0',
+    #TVHEADEND BACKEND
+    'D_TVH_DEBUG'              : '0',
+    'D_TVH_BACKUP'             : '0',
+    'D_TVH_BINDADDR'           : 'All',
+    'D_TVH_TIMEOUT'            : '5',
+    'FILE_TVH_BINDADDR'        : '/tmp/tvh-bindaddr.tmp',
+    'GET_TVH_BINDADDR'         : "ifconfig | awk  '/inet addr:/ {print $2}' | sed 's/addr://' > /tmp/tvh-bindaddr.tmp",
+    }
+
+################################################################################
 # Services
 ################################################################################
 
@@ -173,4 +200,6 @@ _services = {
     'aceproxy': ['aceproxy.service'],
     'wicard': ['wicard.service'],
     'oscam': ['oscam.service'],
+    'tvheadend': ['tvheadend.service'],
+    'vdr-backend': ['vdr-backend.service'],
     }

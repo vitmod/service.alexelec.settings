@@ -1247,3 +1247,161 @@ msgstr ""
 msgctxt "#3622"
 msgid "Start mode Oscam: ALL (always) or TVON (TV only)."
 msgstr ""
+
+########## TV BACKENDS #########
+
+msgctxt "#37000"
+msgid "TV Backends"
+msgstr ""
+
+msgctxt "#3700"
+msgid "Configuration TV Backends for KODI: VDR and Tvheadend services."
+msgstr ""
+
+### VDR ###
+
+msgctxt "#37010"
+msgid "VDR Configuration"
+msgstr ""
+
+msgctxt "#37011"
+msgid "Enable VDR"
+msgstr ""
+
+msgctxt "#3711"
+msgid "VDR is Digital Receiver (DVB-T/T2, DVB-S/S2, DVB-C) and Video Recorder with lots of features (Timeshifting, EPG, ext...)."
+msgstr ""
+
+msgctxt "#37012"
+msgid "Enable Debug"
+msgstr ""
+
+msgctxt "#3712"
+msgid "Enable debugging VDR."
+msgstr ""
+
+msgctxt "#37013"
+msgid "Directory for records"
+msgstr ""
+
+msgctxt "#3713"
+msgid "Directory for records (default: /storage/recordings)."
+msgstr ""
+
+msgctxt "#37014"
+msgid "Enable plugin: dvbapi"
+msgstr ""
+
+msgctxt "#3714"
+msgid "The plugin allows connect VDR to Wicard/Oscam. It creates a software CAM in VDR and communicates with Wicard/Oscam over camd.socket (using 'dvbapi' module)."
+msgstr ""
+
+msgctxt "#37015"
+msgid "Stream plugin:"
+msgstr ""
+
+msgctxt "#3715"
+msgid "Select stream plugin for KODI PVR: xvdr, vnsiserver or none for disable."
+msgstr ""
+
+msgctxt "#37016"
+msgid "Enable plugin: IPTV"
+msgstr ""
+
+msgctxt "#3716"
+msgid "This plugin integrates multicast/unicast IPTV transport streams seamlessly into VDR."
+msgstr ""
+
+msgctxt "#37017"
+msgid "IPTV devices"
+msgstr ""
+
+msgctxt "#3717"
+msgid "Number of devices to be created for IPTV."
+msgstr ""
+
+msgctxt "#37018"
+msgid "Enable plugin: SATIP"
+msgstr ""
+
+msgctxt "#3718"
+msgid "Integrates SAT>IP network devices seamlessly into VDR."
+msgstr ""
+
+msgctxt "#37019"
+msgid "Enable plugin: streamdev-server"
+msgstr ""
+
+msgctxt "#3719"
+msgid "With streamdev-server plugin you can stream live TV via network."
+msgstr ""
+
+msgctxt "#37020"
+msgid "Enable plugin: streamdev-client"
+msgstr ""
+
+msgctxt "#3720"
+msgid "With streamdev-client plugin you can receive live TV streams via network."
+msgstr ""
+
+msgctxt "#37021"
+msgid "Enable plugin: channelscan"
+msgstr ""
+
+msgctxt "#3721"
+msgid "Channelscan plugin It channel scanner for VDR."
+msgstr ""
+
+msgctxt "#37022"
+msgid "Enable plugin: live"
+msgstr ""
+
+msgctxt "#3722"
+msgid "LIVE, the LIVE Interactive VDR Environment, allows a comfortable operation of VDR and some of its plugins trough a web interface."
+msgstr ""
+
+### TVHEADEND ###
+
+msgctxt "#37030"
+msgid "Tvheadend Configuration"
+msgstr ""
+
+msgctxt "#37031"
+msgid "Enable Tvheadend"
+msgstr ""
+
+msgctxt "#3731"
+msgid "Tvheadend is a TV streaming server and recorder supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT>IP as input sources."
+msgstr ""
+
+msgctxt "#37032"
+msgid "Enable Debug"
+msgstr ""
+
+msgctxt "#3732"
+msgid "Enable debugging Tvheadend."
+msgstr ""
+
+msgctxt "#37033"
+msgid "Tvheadend Backup"
+msgstr ""
+
+msgctxt "#3733"
+msgid "Backup configuration tree at upgrade."
+msgstr ""
+
+msgctxt "#37034"
+msgid "Tvheadend bind address:"
+msgstr ""
+
+msgctxt "#3734"
+msgid "Specify an interface IP address on which incoming HTTP and HTSP connections will be accepted. By default, connections are accepted on All interfaces."
+msgstr ""
+
+msgctxt "#37035"
+msgid "Timeout (sec.)"
+msgstr ""
+
+msgctxt "#3735"
+msgid "Wait network before the start TVH (no more than)."
+msgstr ""
