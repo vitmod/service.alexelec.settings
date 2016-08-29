@@ -45,7 +45,7 @@ class scan:
     D_S2_SORT = None
     D_S2_SPEED = None
     
-    menu = {'92': {
+    menu = {'93': {
         'name': 48000,
         'menuLoader': 'load_menu',
         'listTyp': 'list',

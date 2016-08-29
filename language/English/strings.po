@@ -1658,6 +1658,68 @@ msgctxt "#3856"
 msgid "Create logos channels for VDR."
 msgstr ""
 
+########## DiSEqC #########
+
+msgctxt "#47000"
+msgid "VDR DiSEqC"
+msgstr ""
+
+msgctxt "#4700"
+msgid "Configure VDR DiSEqC."
+msgstr ""
+
+msgctxt "#47001"
+msgid "Config DiSEqC for VDR"
+msgstr ""
+
+msgctxt "#47011"
+msgid "DiSEqC port #1"
+msgstr ""
+
+msgctxt "#4711"
+msgid "Enable DiSEqC port number (LNB)."
+msgstr ""
+
+msgctxt "#47012"
+msgid "Satellite"
+msgstr ""
+
+msgctxt "#4712"
+msgid "Select Satellite."
+msgstr ""
+
+msgctxt "#47013"
+msgid "Polarization"
+msgstr ""
+
+msgctxt "#4713"
+msgid "Select Polarization for Satellite."
+msgstr ""
+
+msgctxt "#47014"
+msgid "DiSEqC port #2"
+msgstr ""
+
+msgctxt "#47015"
+msgid "DiSEqC port #3"
+msgstr ""
+
+msgctxt "#47016"
+msgid "DiSEqC port #4"
+msgstr ""
+
+msgctxt "#47020"
+msgid "Setup DiSEqC file"
+msgstr ""
+
+msgctxt "#47021"
+msgid "Execute"
+msgstr ""
+
+msgctxt "#4721"
+msgid "Create a file diseqc.conf"
+msgstr ""
+
 ########## Scan-S2 #########
 
 msgctxt "#48000"

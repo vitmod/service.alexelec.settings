@@ -262,6 +262,36 @@ scan = {
     }
 
 ################################################################################
+# VDR DiSEqC config Module
+################################################################################
+
+swith = {
+    'ENABLED'        : True,
+    'SET_DISEQC'     : "%s/diseqc.sh" % SCRIPT_DIR,
+    'SAT_NAME_FILE'  : '/storage/.config/vdr/sources.conf',
+    'SAT_NAME_TEMP'  : '/tmp/satswith.tmp',
+    'GET_SAT_NAME'   : "cat /storage/.config/vdr/sources.conf | grep '^S.*' | sed 's/[ \t]*$//' > /tmp/satswith.tmp",
+
+    #DiSEqC LNB
+    'D_LNB1'         : '1',
+    'D_LNB2'         : '0',
+    'D_LNB3'         : '0',
+    'D_LNB4'         : '0',
+
+    #DiSEqC SAT
+    'D_SAT1'         : 'S36.0E  Eutelsat W4/W7',
+    'D_SAT2'         : 'S4W     Amos 2/3',
+    'D_SAT3'         : 'S4.9E   Astra 4A',
+    'D_SAT4'         : 'S13E    Hotbird 6/8/9',
+
+    #DiSEqC POLAR
+    'D_POLAR1'       : 'Circular',
+    'D_POLAR2'       : 'Linear',
+    'D_POLAR3'       : 'Linear',
+    'D_POLAR4'       : 'Linear',
+    }
+
+################################################################################
 # Services
 ################################################################################
 

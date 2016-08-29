@@ -1564,6 +1564,64 @@ msgctxt "#3856"
 msgid "Create logos channels for VDR."
 msgstr "Будут загружены и сконвертированы логотипы каналов для VDR. Также, будут созданы отсутствующие иконки каналов."
 
+########## DiSEqC #########
+
+msgctxt "#4700"
+msgid "Configure VDR DiSEqC."
+msgstr "Настройка VDR DiSEqC (файл: diseqc.conf)."
+
+msgctxt "#47001"
+msgid "Config DiSEqC for VDR"
+msgstr "Конфигурация DiSEqC для VDR"
+
+msgctxt "#47011"
+msgid "DiSEqC port #1"
+msgstr "DiSEqC порт #1"
+
+msgctxt "#4711"
+msgid "Enable DiSEqC port number (LNB)."
+msgstr "Включить порт DiSEqC (номер LNB)."
+
+msgctxt "#47012"
+msgid "Satellite"
+msgstr "Спутник"
+
+msgctxt "#4712"
+msgid "Select Satellite."
+msgstr "Выбрать Спутник."
+
+msgctxt "#47013"
+msgid "Polarization"
+msgstr "Поляризация"
+
+msgctxt "#4713"
+msgid "Select Polarization for Satellite."
+msgstr "Выбрать поляризацию спутника: круговая (Circular) или линейная (Linear)."
+
+msgctxt "#47014"
+msgid "DiSEqC port #2"
+msgstr "DiSEqC порт #2"
+
+msgctxt "#47015"
+msgid "DiSEqC port #3"
+msgstr "DiSEqC порт #3"
+
+msgctxt "#47016"
+msgid "DiSEqC port #4"
+msgstr "DiSEqC порт #4"
+
+msgctxt "#47020"
+msgid "Setup DiSEqC file"
+msgstr "Настройка DiSEqC-файла"
+
+msgctxt "#47021"
+msgid "Execute"
+msgstr "Применить настройки"
+
+msgctxt "#4721"
+msgid "Create a file diseqc.conf"
+msgstr "Создать файл: diseqc.conf"
+
 ########## Scan-S2 #########
 
 msgctxt "#48000"
