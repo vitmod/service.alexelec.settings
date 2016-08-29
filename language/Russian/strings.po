@@ -1563,3 +1563,117 @@ msgstr "Создать логотипы"
 msgctxt "#3856"
 msgid "Create logos channels for VDR."
 msgstr "Будут загружены и сконвертированы логотипы каналов для VDR. Также, будут созданы отсутствующие иконки каналов."
+
+########## Scan-S2 #########
+
+msgctxt "#48000"
+msgid "VDR channel Scan"
+msgstr "Сканер каналов VDR"
+
+msgctxt "#4800"
+msgid "Scanner channels for VDR (scan-s2)."
+msgstr "Сканер каналов для VDR (scan-s2)."
+
+msgctxt "#48001"
+msgid "Channel Scanner Settings"
+msgstr "Настройки Сканера каналов"
+
+msgctxt "#48011"
+msgid "DVB device number #"
+msgstr "Номер DVB-тюнера #"
+
+msgctxt "#4811"
+msgid "Select the number of DVB device."
+msgstr "Выбор номера DVB-тюнера для сканироваия каналов (отсчет ведется от нуля)."
+
+msgctxt "#48012"
+msgid "DVB standard"
+msgstr "DVB стандарт"
+
+msgctxt "#4812"
+msgid "Select DVB standard (DVB-S/S2 or DVB-T/T2)."
+msgstr "Выбор стандарта DVB (DVB-S/S2 или DVB-T/T2)."
+
+msgctxt "#48013"
+msgid "DiSEqC port #"
+msgstr "DiSEqC порт #"
+
+msgctxt "#4813"
+msgid "Select DiSEqC port number."
+msgstr "Выбор порта DiSEqC (отсчет ведется от единицы)."
+
+msgctxt "#48014"
+msgid "Satellite"
+msgstr "Спутник"
+
+msgctxt "#4814"
+msgid "Select Satellite."
+msgstr "Выбор сканируемого спутника из списка."
+
+msgctxt "#48015"
+msgid "Polarization"
+msgstr "Поляризация"
+
+msgctxt "#4815"
+msgid "Select Polarization for Satellite."
+msgstr "Выбор Поляризации для спутника: Круговая (Circular) или Линейная (Linear)."
+
+msgctxt "#48016"
+msgid "Transponders file:"
+msgstr "Файл транспондеров:"
+
+msgctxt "#4816"
+msgid "Select transponders file."
+msgstr "Выбор Файла транспондеров из списка."
+
+msgctxt "#48017"
+msgid "Type of channels"
+msgstr "Тип каналов"
+
+msgctxt "#4817"
+msgid "Scan Channels: TV only or All."
+msgstr "Сканировать Все (All) каналы или только ТВ (TV). В режиме TV - радио и сервисные каналы будут пропущены."
+
+msgctxt "#48018"
+msgid "Conditional Access"
+msgstr "Условный доступ"
+
+msgctxt "#4818"
+msgid "Scan Channels: All or FTA only."
+msgstr "Сканировать Все (All) каналы или только открытые (FTA). В режиме FTA - кодированные каналы будут пропущены."
+
+msgctxt "#48019"
+msgid "Update channel list"
+msgstr "Обновлять список каналов"
+
+msgctxt "#4819"
+msgid "Update channel list or create a new list (channels.conf)."
+msgstr "Если опция включена - каналы будут добавлены в конец существующего списка.\nЕсли выключена - будет создан новый список каналов."
+
+msgctxt "#48020"
+msgid "Sort channels"
+msgstr "Сортировать каналы"
+
+msgctxt "#4820"
+msgid "Sort channels by alphabet."
+msgstr "Сортировать каналы по алфавиту."
+
+msgctxt "#48021"
+msgid "Scan speed:"
+msgstr "Скорость сканирования:"
+
+msgctxt "#4821"
+msgid "Scan Speed Channel: Default, Fast or Slow."
+msgstr "Скорость сканирования каналов: По умолчанию (Default), Быстро (Fast) или Медленно (Slow). Чем ниже скорость - тем точнее поиск."
+
+msgctxt "#48030"
+msgid "Start scanning"
+msgstr "Запустить сканирование"
+
+msgctxt "#48031"
+msgid "Execute"
+msgstr "Выполнить"
+
+msgctxt "#4831"
+msgid "Start scanning the channels for the VDR."
+msgstr "Запустить Сканер каналов для VDR."

@@ -131,7 +131,7 @@ ace = {
 
 dvbdev = {
     'ENABLED': True,
-    'GET_DVB_FRONTEND' : "%s/dvbdev.sh" % SCRIPT_DIR,
+    'GET_DVB_FRONTEND' : "%s/frontend.sh" % SCRIPT_DIR,
     'GET_DVB_DRIVER'   : "ls -l /storage/.modules/* | awk -F\/ '{print $7}' |  awk -F\- '{print $2}'",
     'D_DVB_DRIVERS'    : 'CORE',
     'GET_DVB_DRVLIST'  : "%s/dvbdrv.sh" % SCRIPT_DIR,
@@ -224,6 +224,41 @@ tvshell = {
     'D_LOGOS_BG_COLOR'    : 'White',
     'D_LOGOS_FG_COLOR'    : '4',
     'D_LOGOS_TEXT_COLOR'  : 'black',
+    }
+
+################################################################################
+# VDR Scan channels Module
+################################################################################
+
+scan = {
+    'ENABLED'           : True,
+    'RUN_SCAN'          : "%s/scan-s2.sh" % SCRIPT_DIR,
+    'KILL_SCAN'         : "killall -2 scan-s2",
+    'TUNER_LIST'        : "%s/frontend.sh" % SCRIPT_DIR,
+    'TUNER_LIST_TEMP'   : '/tmp/frontend.tmp',
+
+    'S2_SAT_NAME_FILE'  : '/storage/.config/vdr/sources.conf',
+    'S2_SAT_NAME_TEMP'  : '/tmp/satlist.tmp',
+    'S2_GET_SAT_NAME'   : "cat /storage/.config/vdr/sources.conf | grep '^S.*' | sed 's/[ \t]*$//' > /tmp/satlist.tmp",
+    'S2_TPL_DIR'        : '/storage/.config/scan-s2',
+    'S2_GET_TPL_LIST'   : "ls -l /storage/.config/scan-s2/*.cfg | awk '{print $9}' > /tmp/tplist.tmp",
+    'S2_TPL_LIST_FILE'  : '/tmp/tplist.tmp',
+    'S2_GET_TPL_COUNT'  : "%s/tpl-count.sh" % SCRIPT_DIR,
+    'S2_GET_LOG'        : "tail -n1 /tmp/scan-s2.log",
+    'S2_DEL_LOG'        : "rm -f /tmp/scan-s2.log",
+
+    #Scan-S2 settings
+    'D_S2_TUNER'      : 'none',
+    'D_S2_TYPE'       : 'S2',
+    'D_S2_LNB'        : '1',
+    'D_S2_SAT'        : 'S36.0E  Eutelsat W4/W7',
+    'D_S2_POLAR'      : 'Circular',
+    'D_S2_FILE'       : 'S36.0E-HTB.cfg',
+    'D_S2_SERVICE'    : 'All',
+    'D_S2_FTA'        : 'All',
+    'D_S2_UPDATE'     : '0',
+    'D_S2_SORT'       : '1',
+    'D_S2_SPEED'      : 'Default',
     }
 
 ################################################################################

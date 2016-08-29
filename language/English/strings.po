@@ -1657,3 +1657,117 @@ msgstr ""
 msgctxt "#3856"
 msgid "Create logos channels for VDR."
 msgstr ""
+
+########## Scan-S2 #########
+
+msgctxt "#48000"
+msgid "VDR channel Scan"
+msgstr ""
+
+msgctxt "#4800"
+msgid "Scanner channels for VDR (scan-s2)."
+msgstr ""
+
+msgctxt "#48001"
+msgid "Channel Scanner Settings"
+msgstr ""
+
+msgctxt "#48011"
+msgid "DVB device number #"
+msgstr ""
+
+msgctxt "#4811"
+msgid "Select the number of DVB device."
+msgstr ""
+
+msgctxt "#48012"
+msgid "DVB standard"
+msgstr ""
+
+msgctxt "#4812"
+msgid "Select DVB standard (DVB-S/S2 or DVB-T/T2)."
+msgstr ""
+
+msgctxt "#48013"
+msgid "DiSEqC port #"
+msgstr ""
+
+msgctxt "#4813"
+msgid "Select DiSEqC port number."
+msgstr ""
+
+msgctxt "#48014"
+msgid "Satellite"
+msgstr ""
+
+msgctxt "#4814"
+msgid "Select Satellite."
+msgstr ""
+
+msgctxt "#48015"
+msgid "Polarization"
+msgstr ""
+
+msgctxt "#4815"
+msgid "Select Polarization for Satellite."
+msgstr ""
+
+msgctxt "#48016"
+msgid "Transponders file:"
+msgstr ""
+
+msgctxt "#4816"
+msgid "Select transponders file."
+msgstr ""
+
+msgctxt "#48017"
+msgid "Type of channels"
+msgstr ""
+
+msgctxt "#4817"
+msgid "Scan Channels: TV only or All."
+msgstr ""
+
+msgctxt "#48018"
+msgid "Conditional Access"
+msgstr ""
+
+msgctxt "#4818"
+msgid "Scan Channels: All or FTA only."
+msgstr ""
+
+msgctxt "#48019"
+msgid "Update channel list"
+msgstr ""
+
+msgctxt "#4819"
+msgid "Update channel list or create a new list (channels.conf)."
+msgstr ""
+
+msgctxt "#48020"
+msgid "Sort channels"
+msgstr ""
+
+msgctxt "#4820"
+msgid "Sort channels by alphabet."
+msgstr ""
+
+msgctxt "#48021"
+msgid "Scan speed:"
+msgstr ""
+
+msgctxt "#4821"
+msgid "Scan Speed Channel: Default, Fast or Slow."
+msgstr ""
+
+msgctxt "#48030"
+msgid "Start scanning"
+msgstr ""
+
+msgctxt "#48031"
+msgid "Execute"
+msgstr ""
+
+msgctxt "#4831"
+msgid "Start scanning the channels for the VDR."
+msgstr ""
