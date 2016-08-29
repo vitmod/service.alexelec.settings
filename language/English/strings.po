@@ -1658,6 +1658,76 @@ msgctxt "#3856"
 msgid "Create logos channels for VDR."
 msgstr ""
 
+########## TRANSMISSION #########
+
+msgctxt "#46000"
+msgid "Transmission"
+msgstr ""
+
+msgctxt "#4600"
+msgid "Configuration Transmission: a fast, easy and free BitTorrent client"
+msgstr ""
+
+msgctxt "#46010"
+msgid "BitTorrent-client"
+msgstr ""
+
+msgctxt "#46011"
+msgid "Enable Transmission"
+msgstr ""
+
+msgctxt "#4611"
+msgid "Enabled Transmission autostart"
+msgstr ""
+
+msgctxt "#46012"
+msgid "Enable Transmission Secure"
+msgstr ""
+
+msgctxt "#4612"
+msgid "Use authentification"
+msgstr ""
+
+msgctxt "#46013"
+msgid "User Name"
+msgstr ""
+
+msgctxt "#4613"
+msgid "Username for authentification"
+msgstr ""
+
+msgctxt "#46014"
+msgid "Password"
+msgstr ""
+
+msgctxt "#4614"
+msgid "Password for authentification"
+msgstr ""
+
+msgctxt "#46015"
+msgid "Enabled IPs"
+msgstr ""
+
+msgctxt "#4615"
+msgid "Allowed IP addresses (comma-delimited)"
+msgstr ""
+
+msgctxt "#46016"
+msgid "Download Directory"
+msgstr ""
+
+msgctxt "#4616"
+msgid "Select directory for download"
+msgstr ""
+
+msgctxt "#46017"
+msgid "Debug level"
+msgstr ""
+
+msgctxt "#4617"
+msgid "Select Debug level"
+msgstr ""
+
 ########## DiSEqC #########
 
 msgctxt "#47000"

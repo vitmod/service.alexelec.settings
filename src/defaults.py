@@ -292,6 +292,21 @@ swith = {
     }
 
 ################################################################################
+# Transmission Module
+################################################################################
+
+transmission = {
+    'ENABLED'                    : True,
+    'TRANSMISSION_DAEMON'        : '/usr/bin/transmission.start',
+    'D_TRANSMISSION_LOG'         : 'Error',
+    'D_TRANSMISSION_AUTH'        : '0',
+    'D_TRANSMISSION_USER'        : 'alexelec',
+    'D_TRANSMISSION_PWD'         : 'alexelec',
+    'D_TRANSMISSION_IP'          : "*.*.*.*",
+    'D_TRANSMISSION_DL_DIR'      : '/storage/downloads/',
+    }
+
+################################################################################
 # Services
 ################################################################################
 
@@ -313,4 +328,5 @@ _services = {
     'oscam': ['oscam.service'],
     'tvheadend': ['tvheadend.service'],
     'vdr-backend': ['vdr-backend.service'],
+    'transmission': ['transmission.service'],
     }

@@ -1564,6 +1564,76 @@ msgctxt "#3856"
 msgid "Create logos channels for VDR."
 msgstr "Будут загружены и сконвертированы логотипы каналов для VDR. Также, будут созданы отсутствующие иконки каналов."
 
+########## TRANSMISSION #########
+
+msgctxt "#46000"
+msgid "Transmission"
+msgstr "Transmission"
+
+msgctxt "#4600"
+msgid "Configuration Transmission: a fast, easy and free BitTorrent client"
+msgstr "Конфигурация Transmission: быстрого, легкого и бесплатного BitTorrent клиента"
+
+msgctxt "#46010"
+msgid "BitTorrent-client"
+msgstr "BitTorrent-клиент"
+
+msgctxt "#46011"
+msgid "Enable Transmission"
+msgstr "Включить Transmission"
+
+msgctxt "#4611"
+msgid "Enabled Transmission autostart"
+msgstr "Разрешить запуск Transmission"
+
+msgctxt "#46012"
+msgid "Enable Transmission Secure"
+msgstr "Использовать авторизацию"
+
+msgctxt "#4612"
+msgid "Use authentification"
+msgstr "Использовать авторизацию"
+
+msgctxt "#46013"
+msgid "User Name"
+msgstr "Пользователь"
+
+msgctxt "#4613"
+msgid "Username for authentification"
+msgstr "Пользователь для авторизации"
+
+msgctxt "#46014"
+msgid "Password"
+msgstr "Пароль"
+
+msgctxt "#4614"
+msgid "Password for authentification"
+msgstr "Пароль для авторизации"
+
+msgctxt "#46015"
+msgid "Enabled IPs"
+msgstr "Разрешенные IP адреса"
+
+msgctxt "#4615"
+msgid "Allowed IP addresses (comma-delimited)"
+msgstr "Разрешенные IP адреса (разделитель-запятая)"
+
+msgctxt "#46016"
+msgid "Download Directory"
+msgstr "Каталог загрузок"
+
+msgctxt "#4616"
+msgid "Select directory for download"
+msgstr "Выбрать папку для загрузки"
+
+msgctxt "#46017"
+msgid "Debug level"
+msgstr "Уровень отладки"
+
+msgctxt "#4617"
+msgid "Select Debug level"
+msgstr "Выбор уровня ведения журнала работы Transmission."
+
 ########## DiSEqC #########
 
 msgctxt "#4700"
