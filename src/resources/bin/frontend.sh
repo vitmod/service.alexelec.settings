@@ -14,7 +14,7 @@ if [ -e /dev/dvb/adapter0/frontend0 ]; then
       for dev in $DVB_DEV; do
           DVB_NUM=$(echo $dev | awk -F'/' '{print $4}' | sed 's/adapter//')
           FRT_NUM=$(echo $dev | awk -F'/' '{print $5}' | sed 's/frontend//')
-          DEV_NAME=$(cat /sys/class/dvb/dvb$DVB_NUM.frontend$FRT_NUM/device/i2c-?/name)
+          DEV_NAME=$(cat /sys/class/dvb/dvb$DVB_NUM.frontend$FRT_NUM/device/i2c-*/name 2>/dev/null)
           [ -z "$DEV_NAME" ] && DEV_NAME='Unknown'
           echo "$DVB_NUM-$FRT_NUM << $DEV_NAME >>" >> $DVB_LIST
       done
