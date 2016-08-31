@@ -984,6 +984,28 @@ msgctxt "#3331"
 msgid "Disable mouse cursor.\nTo take effect, the system needs to be rebooted."
 msgstr ""
 
+########## UNCLUTTER ##########
+
+msgctxt "#33040"
+msgid "Unclutter"
+msgstr ""
+
+msgctxt "#33041"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#3341"
+msgid "Unclutter hides the mouse pointer when you don't need it."
+msgstr ""
+
+msgctxt "#33042"
+msgid "Time (sec.)"
+msgstr ""
+
+msgctxt "#3342"
+msgid "Is followed by the number of seconds between polls for idleness."
+msgstr ""
+
 ########## ACESTREAM #########
 
 msgctxt "#34000"

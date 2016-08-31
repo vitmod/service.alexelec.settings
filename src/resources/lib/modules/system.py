@@ -41,6 +41,7 @@ class system:
     SND_TEST = None
     SND_FILE_RUN = None
     D_DISABLE_CURSOR = None
+    D_UNCLUTTER_TIME = None
 
     menu = {'1': {
         'name': 32002,
@@ -178,6 +179,33 @@ class system:
                             },
                         },
                     },
+                'unclutter': {
+                    'order': 6,
+                    'name': 33040,
+                    'settings': {
+                        'unclutter_enable': {
+                            'order': 1,
+                            'name': 33041,
+                            'value': '0',
+                            'action': 'initialize_unclutter',
+                            'type': 'bool',
+                            'InfoText': 3341,
+                            },
+                        'unclutter_time': {
+                            'order': 2,
+                            'name': 33042,
+                            'value': '2',
+                            'values': ['1', '2', '3', '4', '5', '8', '10'],
+                            'action': 'initialize_unclutter',
+                            'type': 'multivalue',
+                            'parent': {
+                                'entry': 'unclutter_enable',
+                                'value': ['1'],
+                                },
+                            'InfoText': 3342,
+                            },
+                        },
+                    },
                 'backup': {
                     'order': 7,
                     'name': 32371,
@@ -242,6 +270,7 @@ class system:
             self.initialize_locale(service=1)
             self.initialize_sound()
             self.initialize_xorg(service=1)
+            self.initialize_unclutter(service=1)
             del self.is_service
             self.oe.dbg_log('system::start_service', 'exit_function', 0)
         except Exception, e:
@@ -340,6 +369,11 @@ class system:
             # Xorg mouse cursor
             self.struct['xorg']['settings']['cursor']['value'] = \
             self.oe.get_service_option('xorg', 'DISABLE_CURSOR', self.D_DISABLE_CURSOR).replace('"', '')
+
+            # Unclutter
+            self.struct['unclutter']['settings']['unclutter_enable']['value'] = self.oe.get_service_state('unclutter')
+            self.struct['unclutter']['settings']['unclutter_time']['value'] = \
+            self.oe.get_service_option('unclutter', 'UNCLUTTER_TIME', self.D_UNCLUTTER_TIME).replace('"', '')
 
             self.oe.dbg_log('system::load_values', 'exit_function', 0)
         except Exception, e:
@@ -847,3 +881,21 @@ class system:
         except Exception, e:
             self.oe.set_busy(0)
             self.oe.dbg_log('xorg::initialize_xorg', 'ERROR: (' + repr(e) + ')')
+
+    def initialize_unclutter(self, **kwargs):
+        try:
+            self.oe.dbg_log('services::initialize_unclutter', 'enter_function', 0)
+            self.oe.set_busy(1)
+            if 'listItem' in kwargs:
+                self.set_value(kwargs['listItem'])
+            state = 0
+            options = {}
+            if self.struct['unclutter']['settings']['unclutter_enable']['value'] == '1':
+                state = 1
+                options['UNCLUTTER_TIME']  = '"%s"' % self.struct['unclutter']['settings']['unclutter_time']['value']
+            self.oe.set_service('unclutter', options, state)   
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_unclutter', 'exit_function', 0)
+        except Exception, e:
+            self.oe.set_busy(0)
+            self.oe.dbg_log('services::initialize_unclutter', 'ERROR: (' + repr(e) + ')', 4)

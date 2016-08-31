@@ -890,6 +890,28 @@ msgctxt "#3331"
 msgid "Disable mouse cursor.\nTo take effect, the system needs to be rebooted."
 msgstr "Отключить курсор мыши (не влияет на настройки KODI).\nДля вступления настроек в силу требуется перезагрузка системы."
 
+########## UNCLUTTER ##########
+
+msgctxt "#33040"
+msgid "Unclutter"
+msgstr "Unclutter"
+
+msgctxt "#33041"
+msgid "Enable"
+msgstr "Включить"
+
+msgctxt "#3341"
+msgid "Unclutter hides the mouse pointer when you don't need it."
+msgstr "Unclutter скрывает указатель мыши, когда он не нужен."
+
+msgctxt "#33042"
+msgid "Time (sec.)"
+msgstr "Время (сек.)"
+
+msgctxt "#3342"
+msgid "Is followed by the number of seconds between polls for idleness."
+msgstr "Количество секунд перед скрытием указателя мыши."
+
 ########## ACESTREAM #########
 
 msgctxt "#34000"

@@ -95,6 +95,7 @@ system = {
     'SND_TEST': "speaker-test -D plughw:%d,%d -c2 -t wav",
     'SND_FILE_RUN': '%s/sound.sh' % SCRIPT_DIR,
     'D_DISABLE_CURSOR': '0',
+    'D_UNCLUTTER_TIME': '2',
     }
 
 about = {'ENABLED': True}
@@ -329,4 +330,5 @@ _services = {
     'tvheadend': ['tvheadend.service'],
     'vdr-backend': ['vdr-backend.service'],
     'transmission': ['transmission.service'],
+    'unclutter': ['unclutter.service'],
     }
