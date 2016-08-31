@@ -212,6 +212,7 @@ tvshell = {
     'D_VDR_TVGUIDENG'         : '0',
     'D_VDR_ZAPHISTORY'        : '0',
     'D_VDR_LIVE'              : '0',
+    'D_VDR_LCDPROC'           : '0',
 
     #VDR LOGOS
     'URL_LOGOS_FILE'      : "http://src.alexelec.in.ua/logos/logos.tar.bz2",

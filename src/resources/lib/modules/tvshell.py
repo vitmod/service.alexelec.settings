@@ -40,6 +40,7 @@ class tvshell:
     D_VDR_TVGUIDENG = None
     D_VDR_ZAPHISTORY = None
     D_VDR_LIVE = None
+    D_VDR_LCDPROC = None
 
     URL_LOGOS_FILE = None
     RUN_LOGOS = None
@@ -276,6 +277,15 @@ class tvshell:
                             'parent': {'entry': 'enable_vdr','value': ['1']},
                             'InfoText': 3833,
                         },
+                        'vdr_lcdproc': {
+                            'order': 24,
+                            'name': 38034,
+                            'value': '0',
+                            'action': 'initialize_vdr',
+                            'type': 'bool',
+                            'parent': {'entry': 'enable_vdr','value': ['1']},
+                            'InfoText': 3834,
+                        },
                     },
                 },
                 'logos': {
@@ -466,6 +476,9 @@ class tvshell:
             self.struct['vdr']['settings']['vdr_live']['value'] = \
                 self.oe.get_service_option('vdr', 'VDR_LIVE', self.D_VDR_LIVE).replace('"', '')
 
+            self.struct['vdr']['settings']['vdr_lcdproc']['value'] = \
+                self.oe.get_service_option('vdr', 'VDR_LCDPROC', self.D_VDR_LCDPROC).replace('"', '')
+
             # Logos
             self.struct['logos']['settings']['logos_dir']['value'] = \
                 self.oe.get_service_option('logos', 'LOGOS_DIR', self.D_LOGOS_DIR).replace('"', '')
@@ -522,6 +535,7 @@ class tvshell:
                 options['VDR_TVGUIDENG'] = '"%s"' % self.struct['vdr']['settings']['vdr_tvguideng']['value']
                 options['VDR_ZAPHISTORY'] = '"%s"' % self.struct['vdr']['settings']['vdr_zaphistory']['value']
                 options['VDR_LIVE'] = '"%s"' % self.struct['vdr']['settings']['vdr_live']['value']
+                options['VDR_LCDPROC'] = '"%s"' % self.struct['vdr']['settings']['vdr_lcdproc']['value']
             self.oe.set_service('vdr', options, state)
             self.oe.set_busy(0)
             self.oe.dbg_log('vdr::initialize_vdr', 'exit_function', 0)

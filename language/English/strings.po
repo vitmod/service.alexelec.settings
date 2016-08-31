@@ -1626,6 +1626,14 @@ msgctxt "#3833"
 msgid "LIVE, the LIVE Interactive VDR Environment, allows a comfortable operation of VDR and some of its plugins trough a web interface."
 msgstr ""
 
+msgctxt "#38034"
+msgid "Enable plugin: lcdproc"
+msgstr ""
+
+msgctxt "#3834"
+msgid "Current channel info and menus are then displayed on the LCD."
+msgstr ""
+
 ### Channel logos ###
 
 msgctxt "#38050"
