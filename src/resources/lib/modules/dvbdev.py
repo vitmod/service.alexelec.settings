@@ -204,6 +204,8 @@ class dvbdev:
                 txt_driver = 'MEDIA (media_build)'
             elif info_driver == 'tbs':
                 txt_driver = 'TBS (CrazyCat)'
+            elif info_driver == 's2':
+                txt_driver = 'S2 (S2-liplianin)'
             elif info_driver == 'core':
                 txt_driver = 'CORE (Linux kernel)'
             else:

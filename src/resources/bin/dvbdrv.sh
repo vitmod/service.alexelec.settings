@@ -18,7 +18,10 @@ for DVB_DRV in $DRV_LIST; do
     *-mb)                # Media_Build drivers
         DRIVER="MEDIA"
      ;;
-    *-core)                # s2-liplianin drivers
+    *-s2)                # s2-liplianin drivers
+        DRIVER="S2"
+     ;;
+    *-core)              # Default Linux drivers
         DRIVER="CORE"
      ;;
   esac
