@@ -1167,7 +1167,7 @@ msgid "Select DVB Drivers:"
 msgstr ""
 
 msgctxt "#3511"
-msgid "Select the drivers for your DVB device. To take effect, the system needs to be rebooted.\nCORE - Linux kernel drivers (defaults)\nTBS - for TBS adapters (from CrazyCat)\nMEDIA - media_build drivers\nS2 - s2-liplianin drivers\nALVES - for TBS adapters (from ljalves)"
+msgid "Select the drivers for your DVB device. To take effect, the system needs to be rebooted.\nCORE - Linux kernel drivers (defaults), TBS - for TBS adapters (from CrazyCat), MEDIA - media_build drivers, S2 - s2-liplianin drivers, ALVES - for TBS adapters (from ljalves)."
 msgstr ""
 
 msgctxt "#35012"
