@@ -1073,8 +1073,8 @@ msgid "Select DVB Drivers:"
 msgstr "Выбрать DVB драйвера:"
 
 msgctxt "#3511"
-msgid "Select the drivers for your DVB device. CORE - Linux kernel drivers, TBS - for TBS adapters (www.tbsdtv.com), MEDIA - media_build drivers.\nTo take effect, the system needs to be rebooted."
-msgstr "Выберите драйвера для Вашего DVB адаптера. CORE - драйвера ядра Linux, TBS - для адаптеров TBS (www.tbsdtv.com), MEDIA - драйвера media_build.\nДля вступления изменений в силу требуется перезагрузка системы."
+msgid "Select the drivers for your DVB device. To take effect, the system needs to be rebooted.\nCORE - Linux kernel drivers (defaults)\nTBS - for TBS adapters (from CrazyCat)\nMEDIA - media_build drivers\nS2 - s2-liplianin drivers\nALVES - for TBS adapters (from ljalves)"
+msgstr "Выберите драйвера для Вашего DVB адаптера. Для вступления изменений в силу требуется перезагрузка системы.\nCORE - драйвера ядра Linux\nTBS - для адаптеров TBS (от CrazyCat)\nMEDIA - драйвера media_build\nS2 - драйвера s2-liplianin\nALVES - для адаптеров TBS (от ljalves)"
 
 msgctxt "#35012"
 msgid "DVB info"
