@@ -206,6 +206,8 @@ class dvbdev:
                 txt_driver = 'TBS (CrazyCat)'
             elif info_driver == 's2':
                 txt_driver = 'S2 (S2-liplianin)'
+            elif info_driver == 'alves':
+                txt_driver = 'TBS Open source (Luis Alves)'
             elif info_driver == 'core':
                 txt_driver = 'CORE (Linux kernel)'
             else:

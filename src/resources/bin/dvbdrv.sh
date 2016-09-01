@@ -12,7 +12,7 @@ rm -f $FILE_LIST
 for DVB_DRV in $DRV_LIST; do
   echo $DVB_DRV
   case "$DVB_DRV" in
-    *-tbs)               # TBS-Open drivers
+    *-tbs)               # TBS drivers CrazyCat
         DRIVER="TBS"
      ;;
     *-mb)                # Media_Build drivers
@@ -20,6 +20,9 @@ for DVB_DRV in $DRV_LIST; do
      ;;
     *-s2)                # s2-liplianin drivers
         DRIVER="S2"
+     ;;
+    *-alves)             # TBS drivers ljalves
+        DRIVER="ALVES"
      ;;
     *-core)              # Default Linux drivers
         DRIVER="CORE"
